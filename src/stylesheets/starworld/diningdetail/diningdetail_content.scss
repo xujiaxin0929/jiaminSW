@@ -1,0 +1,52 @@
+#diningdetail_content {
+    background-color: #343434;
+    overflow: hidden;
+    .text-fff {
+        li,
+        p,
+        a,
+        div,
+        span,
+        h5,
+        i,
+        section {
+            color: #fff !important;
+            border-color: #fff !important;
+        }
+    }
+    section {
+        h3 {
+            background-image: url(../images/dot2.png);
+            span {
+                background-color: #343434;
+            }
+        }
+    }
+    #diningdetail_cook {
+        .diningdetail_cook_list {
+            li:before {
+                background-color: #fff;
+            }
+        }
+    }
+    #diningdetail_desc {
+      .restaurant-icon{
+        background-image: url(../images/restaurant-icon2.svg) !important;
+      }
+      .diningdetail_text:after{
+        background-color: #fff;
+      }
+      .diningdetail_oreder{
+        color:#111!important;
+      }
+    }
+    .diningdetail_menu_list{
+      a{
+        color:#707070 !important;
+        transition:.25s;
+        &:hover{
+          color:#fff !important;
+        }
+      }
+    }
+}

@@ -1,0 +1,21 @@
+#hotel_name{
+  margin-bottom: 105px;
+  @media (max-width:$screen-xs-max) {
+    margin-bottom: 20px;
+  }
+	@extend #hp_introduce;
+  h2{
+    margin-bottom: 20px;
+    @media (max-width:$screen-xs-max) {
+      letter-spacing: 6px;
+    }
+  }
+  p{
+    line-height: 26px;
+    margin: 0;
+    @media (max-width:$screen-xs-max) {
+      margin-bottom: 18px;
+    }
+  }
+}
+

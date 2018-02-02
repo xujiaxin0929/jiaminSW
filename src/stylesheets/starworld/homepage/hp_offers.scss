@@ -1,0 +1,200 @@
+#hp_offers {
+    @media (max-width: $screen-xs-max) {
+        // margin-top: 30px;
+        .caption {
+            padding: 23px 12px 30px 12px !important;
+        }
+    }
+    .caption {
+        padding-top: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 35px;
+        .desc {
+            min-height: 44px;
+        }
+    }
+    .container-show {
+        overflow: hidden;
+        position: relative;
+        .col-lg-4 {
+            padding: 0 15px;
+            position: static;
+            @media (max-width: $screen-xs-max) {
+                padding: 0;
+                position: relative;
+            }
+            @media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
+                position: relative;
+                &:nth-child(odd) {
+                    clear: both;
+                }
+            }
+            .img {
+                display: block;
+                overflow: hidden;
+            }
+            img {
+                width: 100%;
+                transition: 0.3s;
+                -moz-transition: 0.3s;
+                &:hover {
+                    transform: scale(1.1);
+                    -moz-transform: scale(1.1);
+                    cursor: pointer;
+                }
+            }
+            .caption {
+                p {
+                    font-size: 14px;
+                    color: #343434;
+                    line-height: 22px;
+                    @media (max-width: $screen-xs-max) {
+                        line-height: 22px;
+                    }
+                }
+                h4 {
+                    font-weight: 600;
+                    letter-spacing: 5px;
+                    a {
+                        font-size: 24px;
+                        &:hover {
+                            color: #343434;
+                            text-decoration: none;
+                        }
+                        &:focus {
+                            color: #343434;
+                            text-decoration: none;
+                        }
+                        @media (max-width:$screen-xs-max) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+                .desc1 {
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #343434;
+                    margin-top: 10px;
+                    overflow: hidden;
+                    @media (max-width: $screen-sm-max) {
+                        font-size: 15px;
+                        line-height: 25px;
+                    }
+                    &:last-of-type {
+                        margin-top: 6px;
+                    }
+                }
+                .glyphicon-map-marker {
+                    font-size: 16px;
+                    color: #9a9a9a;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                    margin-top: -3px;
+                }
+                >a {
+                    position: absolute;
+                    bottom: 0;
+                    min-width: 100px;
+                    color: #644c2b;
+                    @media (max-width: $screen-sm-max) {
+                        position: relative;
+                        display: inline-block;
+                        margin-top: 15px;
+                        width: calc(100% - 24px);
+                        width: -webkit-calc(100% - 24px);
+                    }
+                    &:hover {
+                        color: #644c2b;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .swiper-slide {
+        position: static;
+        height: auto;
+        .img {
+            display: block;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+            transition: 0.3s;
+            -moz-transition: 0.3s;
+            &:hover {
+                transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
+        .caption {
+            p {
+                font-size: 14px;
+                color: #343434;
+                line-height: 22px;
+                margin-top: 15px;
+                @media (max-width: $screen-xs-max) {
+                    font-size: 15px;
+                    line-height: 25px;
+                    margin-top: 10px;
+                }
+            }
+            h4 {
+                font-weight: 600;
+                letter-spacing: 5px;
+                a {
+                    font-size: 24px;
+                    &:hover {
+                        color: #343434;
+                        text-decoration: none;
+                    }
+                    &:focus {
+                        color: #343434;
+                        text-decoration: none;
+                    }
+                    @media (max-width:$screen-xs-max) {
+                        font-size: 20px;
+                    }
+                }
+            }
+            .desc1 {
+                font-size: 14px;
+                line-height: 24px;
+                color: #343434;
+            }
+            .glyphicon-map-marker {
+                font-size: 16px;
+                color: #9a9a9a;
+                margin-right: 10px;
+                vertical-align: middle;
+                margin-top: -3px;
+            }
+            >a {
+                position: absolute;
+                bottom: 0;
+                min-width: 100px;
+                color: #644c2b;
+                @media (max-width: $screen-sm-max) {
+                    // position:relative;
+                    // display:inline-block;
+                    // margin-top: 15px;
+                    width: calc(100% - 24px);
+                    width: -webkit-calc(100% - 24px);
+                }
+                &:hover {
+                    color: #644c2b;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .cols-3 {
+        .swiper-slide {
+            @media (min-width: $screen-sm-min) {
+                // width: 382px
+            }
+        }
+    }
+}

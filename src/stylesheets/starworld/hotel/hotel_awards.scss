@@ -1,0 +1,43 @@
+#hotel_awards{
+  .hotel_awards_box{
+    text-align: center;
+    overflow: hidden;
+    @media (max-width:$screen-sm-max) {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    >div{
+      float: left;
+      width:20%;
+      @media (max-width:$screen-sm-max) {
+        width:50%;
+        &:nth-child(2n+1){
+          clear:both;
+        }
+      }
+      .pic{
+        height:123px;
+        @media (max-width:$screen-sm-max) {
+            height:78px;
+          }
+        img{
+          width: 122px;
+          max-height: 100%;
+          @media (max-width:$screen-sm-max) {
+            width:77px;
+          }
+        }
+      }
+      p{
+        font-size: 16px;
+        color: #111;
+        line-height: 24px;
+        @media (max-width:$screen-sm-max) {
+          font-size: 12px;
+          line-height: 18px;
+          margin:8px 0 19px;
+        }
+      }
+    }
+  }
+}

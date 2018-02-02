@@ -1,0 +1,15 @@
+#hp_gourmet{
+  @extend #hp_hotel_11;
+  @extend #hp_offers;
+  .hp_gourmet_show{
+    margin-bottom: 28px;
+    @media (max-width:$screen-xs-max) {
+      margin-bottom: 20px;
+    }
+  }
+  .control{
+    @media (min-width:$screen-sm-max) {
+      display: none;
+    }
+  }
+}

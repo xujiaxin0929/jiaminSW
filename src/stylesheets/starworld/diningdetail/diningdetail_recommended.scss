@@ -1,0 +1,72 @@
+#diningdetail_recommended {
+    @extend #hp_offers;
+    .diningdetail_menu {
+        margin-top: 20px;
+        @media (max-width: $screen-sm-max) {
+          margin-top: 0;
+        }
+        h5 {
+            font-size: 24px;
+            letter-spacing: 6px;
+            text-indent: 6px;
+            color: #111;
+            text-align: center;
+            @media (max-width: $screen-sm-max) {
+              font-size: 20px;
+              letter-spacing: 5px;
+            }
+        }
+        .diningdetail_menu_list {
+            overflow: hidden;
+            margin: 45px 0 0;
+            text-align: center;
+            font-size: 0;
+            padding:0;
+            @media (max-width: $screen-sm-max) {
+              margin:10px 0 0;
+            }
+            li {
+                width: 33.3%;
+                text-align: center;
+                display: inline-block;
+                list-style: none;
+                padding: 0;
+                vertical-align: top;
+                @media (max-width: $screen-sm-max) {
+                    width: 50%;
+                    margin-top: 20px;
+                    line-height: 20px;
+                }
+                .pic {
+                    height: 69px;
+                    line-height: 69px;
+                    margin-bottom: 15px;
+                    @media (max-width: $screen-sm-max) {
+                      height: 49px;
+                      line-height: 49px;
+                      margin-bottom: 8px;
+
+                    }
+                    img {
+                        max-height: 69px;
+                        vertical-align: middle;
+                        @media (max-width: $screen-sm-max) {
+                          max-height: 49px;
+                        }
+                    }
+                }
+                a {
+                    color: #707070;
+                    font-size: 14px;
+                    @media (max-width: $screen-sm-max) {
+                      font-size: 15px;
+                      color:#343434;
+                    }
+                    &:hover {
+                        color: #79451b;
+                    }
+                }
+            }
+        }
+    }
+}

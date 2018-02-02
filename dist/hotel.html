@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>1.0 Hotel</title>
+		<meta charset="utf-8">
+		<meta name="viewport"  content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="css/daterangepicker.min.css">
+		<link rel="stylesheet" href="css/master.css">
+		<link rel="stylesheet" href="css/jquery-ui.css">
+		<script src="js/lib/jquery.js"></script>
+		<script src="js/lib/jquery-ui.js"></script>
+		<script src="js/lib/bootstrap.min.js"></script>
+		<script src="js/lib/classList.min.js"></script>
+		<script src="js/lib/swiper.min.js"></script>
+		<script src="js/lib/moment.min.js"></script>
+		<script src="js/lib/jquery.daterangepicker.min.js"></script>
+	</head>
+	<body>
+		<!-- inject:common/sm_main_menu_2:html -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="sm_top_menu_01 container-fluid hidden-sm hidden-xs">
+        <ul class="navbar-nav list-unstyled">
+            <li class="lh">银河娱乐集团：</li>
+            <li><a href="#">澳门星际酒店</a></li>
+            <li class="divider-vertical"></li>
+            <li><a href="#">澳门银河</a></li>
+            <li class="divider-vertical"></li>
+            <li><a href="#">澳门百老汇</a></li>
+        </ul>
+        <ul class="navbar-nav list-unstyled navbar-right">
+            <li>
+                <div class="wechat-hov">
+                    <span class="galaxyicon galaxyicon-wechat left"></span>微信预订
+                    <div class="code-drop"><img src="images/qr.png"></div>
+                </div>
+            </li>
+            <li><span class="galaxyicon galaxyicon-tel left"></span>+853 2888 0888</li>
+            <li><a href="#"><span class="glyphicon glyphicon-map-marker left"></span>如何到达</a></li>
+            <li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="iconi-globe left"></span>Language</a>
+                <ul class="dropdown-menu language-menu">
+                    <li><a href="#">简体中文</a></li>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">繁體中文</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="container-fluid sm_top_menu_03">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <div class="navbar-toggle collapsed">
+                <div class="iconbar-container">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </div>
+                <div class="icon-text">
+                    菜单
+                </div>
+            </div>
+            <a class="navbar-brand" href="homepage.html">
+                <i class="sm"></i>
+                <img src="images/logo.svg" class="img-responsive" alt="">
+            </a>
+            <div class="pull-right">
+                <div class="btn-order btn-gold hidden-md hidden-lg hidden-xl">
+                    <div>预&nbsp;订</div>
+                    <div>关&nbsp;闭</div>
+                </div>
+                <div class="btn-search">
+                    <div><span class="iconi-zoom"></span></div>
+                    <div><span class="iconi-close"></span></div>
+                </div>
+            </div>
+            <div class="search-wrap"></div>
+            <div class="mobile-book-wrap">
+                <div class="main-reserve" data-plug-banner="1">
+                    <div class="contents">
+                        <div>
+                            <div class="content hotel">
+                                <h2>预订酒店</h2>
+                                <h3>选择理想的酒店和入住时间，然后选择心仪的房型</h3>
+                                <div class="clearfix">
+                                    <div class="ctrl-date ctrl-item">
+                                        <div class="ctrl-date-title ctrl-title" id="ctrl-date">选择日期</div>
+                                    </div>
+                                    <div class="ctrl-person ctrl-child ctrl-item">
+                                        <div class="ctrl-person-title ctrl-title" id="child">2</div>
+                                        <div class="dropdown-menu1 ctrl-list">
+                                            <div class="title">
+                                                <div>
+                                                    <span class="glyphicon glyphicon-minus"></span>
+                                                    <span>成人</span><span id="adult-num2">2</span>
+                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                </div>
+                                                <div>
+                                                    <span class="glyphicon glyphicon-minus"></span>
+                                                    <span>儿童</span>
+                                                    <span id="children-num2">0</span>
+                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                </div>
+                                            </div>
+                                            <div class="btn">
+                                                <a href="javascript:;" class="nps-cancel" id="nps-cancel">取消</a>
+                                                <a href="javascript:;" class="nps-confirm">确定</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="btn-order3">预定</a>
+                                <div class="tab1-inner-content hidden-lg hidden-md">
+                                    <h3><span>通过官网预定可享受</span></h3>
+                                    <ul>
+                                        <li>最优惠房价保证</li>
+                                        <li>优先免费升级房间</li>
+                                        <li>退房时间延至14:00</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav placeholder">
+                <li class="hidden-sm hidden-xs"><a href="#"> a</a></li>
+            </ul>
+            <ul class="nav navbar-nav nav-left">
+                <li><a href="promotion.html">优惠</a></li>
+                <li><a href="hotel.html">客房</a></li>
+                <li><a href="dining.html">美食</a></li>
+            </ul>
+            <ul class="nav navbar-nav nav-right">
+                <li><a href="entertainment.html">娱乐</a></li>
+                <li><a href="banquet.html">宴会</a></li>
+                <li><a href="rewards.html">银娱优越会</a></li>
+                <li class="btn-order btn-gold hidden-xs hidden-sm">
+                    <div class="gold-dropdown">
+                        <a href="#" class="dropdown-toggle gold-toggle" data-toggle="dropdown">
+                            <div><span class="span">预&nbsp;订</span></div>
+                            <div><span class="span">关&nbsp;闭</span></div>
+                        </a>
+                        <div class="dropdown-menu gold">
+                            <div id="bookingbar" class="container">
+                                <div class="tab-content">
+                                    <div id="bookingbar-tab1" class="tab-pane fade in active">
+                                        <fieldset class="inner">
+                                            <h5 class="hidden-xs hidden-sm">预订酒店</h5>
+                                            <div class="date-select dropdown">
+                                                <div><span class="iconi-date"></span><span class="result" id="date2">2017年08月11日 - 2017年08月12日</span><span class="caret" id="input_trigger11"></span></div>
+                                            </div>
+                                            <div id="datepicker"></div>
+                                            <div class="number-people-select dropdown">
+                                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                                                    <div class="result">
+                                                        <span class="iconi-people"></span><span class="select-result3">2</span>&nbsp;人
+                                                        <!--<span class="select-result4">1</span>&nbsp;房间 -->
+                                                        <span class="caret"></span>
+                                                    </div>
+                                                </a>
+                                                <div class="dropdown-menu1 dropdown-menu">
+                                                    <div class="title">
+                                                        <div>
+                                                            <span class="glyphicon glyphicon-minus"></span>
+                                                            <span class="room-num">1</span><span>房间</span>
+                                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="glyphicon glyphicon-minus"></span>
+                                                            <span class="adult-num">2</span><span>成人</span>
+                                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="glyphicon glyphicon-minus"></span>
+                                                            <span class="children-num">0</span><span>儿童</span>
+                                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="" class="btn-order btn-gold">立即预订</a>
+                                        </fieldset>
+                                        <!-- <div class="tab1-inner-content">
+                                            <h3><span>通过官网预订可享受</span></h3>
+                                            <ul>
+                                                <li>最优惠房价保证</li>
+                                                <li>优先免费升级房间</li>
+                                                <li>退房时间延至14:00</li>
+                                            </ul>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="btn-search hidden-xs hidden-sm">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <div><i class="iconi-zoom"></i></div>
+                        <div><i class="iconi-close"></i></div>
+                    </a>
+                    <div class="dropdown-menu search">
+                        <div class="search-main">
+                            <div class="input-group">
+                                <span class="input-group-addon iconi-zoom"></span>
+                                <input type="search" class="form-control">
+                            </div>
+                            <div class="search-content">
+                                <p>更多精彩内容，欢迎了解：</p>
+                                <ul>
+                                    <li><a href="">澳门百老汇</a></li>
+                                    <li><a href="">澳门JW万豪酒店</a></li>
+                                    <li><a href="">澳门丽思卡尔顿</a></li>
+                                    <li><a href="">红伶</a></li>
+                                    <li><a href="">百老汇奇幻秀</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <div class="mobile-language row">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="iconi-globe left"></span> Language</a>
+            <div class="ml-slect">
+                <select>
+                    <option value=""><a href="#">简体中文</a></option>
+                    <option value=""><a href="#">English</a></option>
+                    <option value=""><a href="#">繁體中文</a></option>
+                </select>
+            </div>
+        </div>
+        <!-- mobile collapse modal -->
+        <div class="collapse-modal"></div>
+    </div>
+    <!-- /.container-fluid -->
+    <div class="booking-fixed" id="booking-fixed">
+        <button class="navbar-toggle" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="container">
+            <fieldset class="inner">
+                <h5 class="hidden-xs hidden-sm">预订酒店</h5>
+                <div class="date-select dropdown">
+                    <div><span class="iconi-date"></span><span class="result" id="date3">2017年09月20日 - 2017年09月21日</span><span class="caret" id="input_trigger11"></span></div>
+                </div>
+                <div id="datepicker"></div>
+                <div class="number-people-select dropdown">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="result">
+                            <span class="iconi-people"></span>&nbsp;
+                            <span class="select-result3">2</span>人
+<!--                             <span class="select-result4">1</span>&nbsp;房间 -->
+                            <span class="caret"></span>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu1 dropdown-menu">
+                        <div class="title">
+                            <div>
+                                <span class="glyphicon glyphicon-minus"></span>
+                                <span class="room-num">1</span><span>房间</span>
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </div>
+                            <div>
+                                <span class="glyphicon glyphicon-minus"></span>
+                                <span class="adult-num">2</span><span>成人</span>
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </div>
+                            <div>
+                                <span class="glyphicon glyphicon-minus"></span>
+                                <span class="children-num">0</span><span>儿童</span>
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="btn-order btn-gold">立即预订</a>
+            </fieldset>
+        </div>
+    </div>
+</nav>
+<script src="js/sm_main_menu.js" charset="utf-8"></script>
+
+		<!-- endinject -->
+		<!-- inject:hotel/hp_hero_slideshow_09:html -->
+		<div id="hp_hero_slideshow_09" class="swiper-container">
+    <div class="swiper-wrapper text-center">
+        <div class="swiper-slide">
+            <img class="slide-bg" src="images/hotel_slideshow_01.png">
+            <div class="slide-box">
+            <h1>于高处<i class="hidden-xs">&nbsp;</i><span>尊享星级款待</span></h1>
+                <h2>俯瞰风光<i class="hidden-xs">，</i><span>悠享时光<i class="hidden-xs">。</i></span></h2>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img class="slide-bg" src="images/hotel_slideshow_01.png">
+            <div class="slide-box">
+            <h1>于高处<i class="hidden-xs">&nbsp;</i><span>尊享星级款待</span></h1>
+                <h2>俯瞰风光<i class="hidden-xs">，</i><span>悠享时光<i class="hidden-xs">。</i></span></h2>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img class="slide-bg" src="images/hotel_slideshow_01.png">
+            <div class="slide-box">
+            <h1>于高处<i class="hidden-xs">&nbsp;</i><span>尊享星级款待</span></h1>
+                <h2>俯瞰风光<i class="hidden-xs">，</i><span>悠享时光<i class="hidden-xs">。</i></span></h2>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination swiper-pagination-white swiper-pagination-clickable"></div>
+    <div class="swiper-button-prev"><span class="galaxyicon-left icon-arrow-down color-white"></span></div>
+    <div class="swiper-button-next"><span class="galaxyicon-right icon-arrow-down color-white"></span></div>
+</div>
+<script src="js/hp_hero_slideshow_09.js" charset="utf-8"></script>
+
+		<!-- endinject -->
+		<div class="main-content hp-content">
+			<!-- inject:common/hp_bookingbar_11:html -->
+			<div id="bookingbar" class="container">
+    <div class="tab-content">
+        <div id="bookingbar-tab1" class="tab-pane fade in active">
+            <fieldset class="inner">
+                <h5 class="hidden-xs hidden-sm">预订酒店</h5>
+                <div class="date-select dropdown">
+                    <div><span class="iconi-date"></span><span class="result" id="date1">2017年08月11日 - 2017年08月12日</span><span class="caret" id="input_trigger11"></span></div>
+                </div>
+                <div id="datepicker"></div>
+                <div class="number-people-select dropdown">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="result">
+                            <span class="iconi-people"></span><span class="select-result3">2</span>&nbsp;人
+                            <!--<span class="select-result4">1</span>&nbsp;房间 -->
+                            <span class="caret"></span>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu1 dropdown-menu">
+                        <div class="title">
+                            <div>
+                                <span class="glyphicon glyphicon-minus"></span>
+                                <span class="room-num">1</span><span>房间</span>
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </div>
+                            <div>
+                                <span class="glyphicon glyphicon-minus"></span>
+                                <span class="adult-num">2</span><span>成人</span>
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </div>
+                            <div>
+                                <span class="glyphicon glyphicon-minus"></span>
+                                <span class="children-num">0</span><span>儿童</span>
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="btn-order btn-gold">立即预订</a>
+            </fieldset>
+            <!-- <div class="tab1-inner-content">
+                <h3><span>通过官网预订可享受</span></h3>
+                <ul>
+                    <li>最优惠房价保证</li>
+                    <li>优先免费升级房间</li>
+                    <li>退房时间延至14:00</li>
+                </ul>
+            </div> -->
+        </div>
+    </div>
+</div>
+<script src="js/hp_bookingbar_10.js" charset="utf-8"></script>
+
+			<!-- endinject -->
+			<!-- inject:hotel/hotel_name:html -->
+			<section id="hotel_name" class="container text-center">
+    <h2>兼得开阔视野与典雅舒适</h2>
+    <p>39层星际高度，坐拥城市天际线，在房内即可凭窗眺望繁华夜景。<br class="hidden-xs" />500间优雅精致的豪华客房及套房，24小时星级服务及噪音隔离设施，让你舒享身心惬意。</p>
+    <p>酒店17楼设有天际泳池，让你在畅游的同时也能远眺宜人风光。更有设施齐备的健身房，任你挥洒活力，调整至最佳状态。</p>
+</section>
+<script src="js/hotel_skinny_bookinbar.js"></script>
+
+			<!-- endinject -->
+			<!-- inject:hotel/hotel_rooms:html -->
+			<section id="hotel_rooms">
+    <div class="container">
+        <div class="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+            <h3><span>房型介绍</span></h3>
+            <p class="lead">ROOMS</p>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-lg-6 swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/hotel_01.png" alt=""></div>
+                    <div class="swiper-slide"><img src="images/hotel_01.png" alt=""></div>
+                    <div class="swiper-slide"><img src="images/hotel_01.png" alt=""></div>
+                </div>
+                <div class="left control text-center">
+                    <span class="galaxyicon-left icon-arrow-left"></span>
+                </div>
+                <div class="right control text-center">
+                    <span class="galaxyicon-right icon-arrow-right"></span>
+                </div>
+                <div class="swiper-pagination swiper-pagination-white swiper-pagination-clickable"></div>
+            </div>
+            <div class="col-xs-12 col-lg-6 desc">
+                <div class="detail">
+                    <div class="inner">
+                        <h4 class="h3-title">星际套房</h4>
+                        <p class="text-left">在星际套房，尽享星际款待！透过巨大的落地窗，足不出户将绝佳城景尽收眼底。霓虹闪烁，波光流转，与身边之人举杯共饮佳酿，臻选葡萄酒为记忆增香，私享顶级居停空间带来的美妙一夜。</p>
+                        <ul class="hotel_rooms_list">
+                            <li>位处最佳楼层</li>
+                            <li>108平方米</li>
+                            <li>定制级洗手间及浴室用品</li>
+                            <li>国际有限频道及房内电影</li>
+                            <li>享有工作间及行政人员办公桌</li>
+                            <li>畅享健身室及天际泳池</li>
+                            <li>奢华透视大理石浴室</li>
+                            <li>松软枕头及高级羽绒被</li>
+                            <li>42寸平面等离子电视</li>
+                            <li>提供当日报纸</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-lg-6 swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/hotel_02.png" alt=""></div>
+                    <div class="swiper-slide"><img src="images/hotel_02.png" alt=""></div>
+                    <div class="swiper-slide"><img src="images/hotel_02.png" alt=""></div>
+                </div>
+                <div class="left control text-center">
+                    <span class="galaxyicon-left icon-arrow-left"></span>
+                </div>
+                <div class="right control text-center">
+                    <span class="galaxyicon-right icon-arrow-right"></span>
+                </div>
+                <div class="swiper-pagination swiper-pagination-white swiper-pagination-clickable"></div>
+            </div>
+            <div class="col-xs-12 col-lg-6 desc">
+                <div class="detail">
+                    <div class="inner">
+                        <h4 class="h3-title">豪华套房</h4>
+                        <p class="text-left">我们知道您对品味有独到的要求，豪华套房正是为懂得欣赏的您而预备。在奢华的大理石浴室中享受一个暖水按摩浴，窝在松软而温暖的床上，一杯葡萄美酒微醺之时，人生之享，无过于此。</p>
+                        <ul class="hotel_rooms_list">
+                            <li>位于33至38层</li>
+                            <li>72平方米</li>
+                            <li>畅享网络及本地电话通服务</li>
+                            <li>高级葡萄酒和新鲜果篮</li>
+                            <li>可免费升级至海景房或湖景房（视入住情况）</li>
+                            <li>畅享健身室及天际泳池</li>
+                            <li>奢华透视大理石浴室</li>
+                            <li>松软枕头及高级羽绒被</li>
+                            <li>42寸平面等离子电视</li>
+                            <li>提供当日报纸</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12  col-lg-6 swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/hotel_03.png" alt=""></div>
+                    <div class="swiper-slide"><img src="images/hotel_03.png" alt=""></div>
+                    <div class="swiper-slide"><img src="images/hotel_03.png" alt=""></div>
+                </div>
+                <div class="left control text-center">
+                    <span class="galaxyicon-left icon-arrow-left"></span>
+                </div>
+                <div class="right control text-center">
+                    <span class="galaxyicon-right icon-arrow-right"></span>
+                </div>
+                <div class="swiper-pagination swiper-pagination-white swiper-pagination-clickable"></div>
+            </div>
+            <div class="col-xs-12  col-md-6 col-lg-6 desc">
+                <div class="detail">
+                    <div class="inner">
+                        <h4 class="h3-title">行政客房</h4>
+                        <p class="text-left">商旅之中，不负生活。前往健身房释放运动活力，在天际泳池尽赏水天一色，步入大理石浴室畅爽沐浴，躺在舒适的床上把身心放空……即便是商旅途中，，也要尽享工作悠闲两相宜。</p>
+                        <ul class="hotel_rooms_list">
+                            <li>位处30至39楼</li>
+                            <li>36平方米</li>
+                            <li>畅享网络及本地电话通服务</li>
+                            <li>可免费升级至海景房或湖景房（视入住情况）</li>
+                            <li>畅享健身室及天际泳池</li>
+                            <li>奢华透视大理石浴室</li>
+                            <li>松软枕头及高级羽绒被</li>
+                            <li>42寸平面等离子电视</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-lg-6 swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/hotel_04.png" alt=""></div>
+                    <div class="swiper-slide"><img src="images/hotel_04.png" alt=""></div>
+                    <div class="swiper-slide"><img src="images/hotel_04.png" alt=""></div>
+                </div>
+                <div class="left control text-center">
+                    <span class="galaxyicon-left icon-arrow-left"></span>
+                </div>
+                <div class="right control text-center">
+                    <span class="galaxyicon-right icon-arrow-right"></span>
+                </div>
+                <div class="swiper-pagination swiper-pagination-white swiper-pagination-clickable"></div>
+            </div>
+            <div class="col-xs-12 col-lg-6 desc">
+                <div class="detail">
+                    <div class="inner">
+                        <h4 class="h3-title">豪华客房</h4>
+                        <p class="text-left">轻松自在，舒享惬意。一跃而入清澈的泳池畅快放松，放松身心坠进如羽绒包裹般柔软的大床，打开42寸电视看一段精彩的节目…… 在豪华客房，尽享星际体验！</p>
+                        <ul class="hotel_rooms_list">
+                            <li>位处18至29楼</li>
+                            <li>36平方米</li>
+                            <li>可选不同房型</li>
+                            <li>畅享健身室及天际泳池</li>
+                            <li>奢华透视大理石浴室</li>
+                            <li>松软枕头及高级羽绒被</li>
+                            <li>42寸平面等离子电视</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="js/hotel_rooms.js" charset="utf-8"></script>
+
+			<!-- endinject -->
+			<!-- inject:hotel/hotel_awards:html -->
+			<section id="hotel_awards" class="container">
+  <div class="row">
+        <div class="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+            <h3><span>奖项殊荣</span></h3>
+            <p class="lead">AWARDS</p>
+        </div>
+    </div>
+  <div class="hotel_awards_box">
+    <div>
+      <div class="pic"><img src="images/hotel_awards_01.png"></div>
+      <p>TripAdvisor 2015年<br/>优等证书得奖者</p>
+    </div>
+    <div>
+      <div class="pic"><img src="images/hotel_awards_02.png"></div>
+      <p>2015年<br/>亚洲顶级渡假酒店</p>
+    </div>
+    <div>
+      <div class="pic"><img src="images/hotel_awards_03.png"></div>
+      <p>2017《香港及澳门米其林指南》<br/>“高级舒适“酒店</p>
+    </div>
+    <div>
+      <div class="pic"><img src="images/hotel_awards_04.png"></div>
+      <p>中国十大最具魅力酒店</p>
+    </div>
+    <div>
+      <div class="pic"><img src="images/hotel_awards_05.png"></div>
+      <p>2011 - 2015<br/>亚洲最佳卓越服务酒店</p>
+    </div>
+  </div>
+</section>
+			<!-- endinject -->
+			<!-- inject:hotel/hotel_more:html -->
+			<section id="hotel_more">
+    <div class="container">
+        <div class="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+            <h3><span>休闲设施</span></h3>
+            <p class="lead">AMENITIES</p>
+        </div>
+    </div>
+    <div class="swiper-container-wrapper container">
+        <div class="container swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="" class="img"><img class="img-responsive" src="images/hotel_more_01.png" alt=""></a>
+                    <div class="caption">
+                        <h4><a href="">天际泳池</a></h4>
+                        <p>傲立于星际酒店17楼，露天设计。当你身处泳池之时，尽赏水天一色，思绪飘至天际。</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="" class="img"><img class="img-responsive" src="images/hotel_more_02.png" alt=""></a>
+                    <div class="caption">
+                        <h4><a href="">健身中心</a></h4>
+                        <p>多台专业水力健身器械和各项健身设施，让您畅快享受运动的酣畅淋漓！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="left control text-center">
+            <span class="galaxyicon-left icon-arrow-left"></span>
+        </div>
+        <div class="right control text-center">
+            <span class="galaxyicon-right icon-arrow-right"></span>
+        </div>
+    </div>
+</section>
+<script src="js/hotel_more.js" charset="utf-8"></script>
+
+			<!-- endinject -->
+			<!-- inject:hotel/hotel_testimonials:html -->
+			<section id="hotel_testimonials" class="container">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-no-swiping">
+                <div class="container">
+                    <div class="row">
+                        <div class=" left-field col-xs-12 col-md-9 col-lg-9">
+                            <p class="qoute-feild">
+                                <span class="qoute-feild__left">“</span>
+                                <span class="qoute-feild__right">”</span>星际酒店的装修设计融合传统中国文化，为迎合东方品牌文化，特意请来影帝梁朝伟担任品牌代言人。设有超过507间客房和套房两间面积6000平方呎的超级豪华天际套房，所有房间均可观看澳门景色。酒店亦有多家食肆、娱乐场所和商店。另设有水疗中心、健康桑拿会所、卡拉OK、夜总会、健身室及17楼的天际泳池等。
+                            </p>
+                        </div>
+                        <div class=" right-feild col-xs-12 col-md-3 col-lg-3">
+                            <div class="col-xs-12 col-md-6 col-lg-6 img">
+                                <img class="right-feild__img img-responsive img-circle" src="images/hotel_advantages-7.png">
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-lg-6 text">
+                                <h4 class="right-feild__name">北极麦麦</h4>
+                                <div class="right-feild__date">
+                                    (上海,中国)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="js/hotel_testimonials.js" charset="utf-8"></script>
+
+			<!-- endinject -->
+			<!-- inject:hotel/hotel_discount:html -->
+			<section id="hotel_discount">
+    <div class="container">
+        <div class="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+            <h3><span>星优惠</span></h3>
+            <p class="lead">OFFERS</p>
+        </div>
+    </div>
+    <div class="swiper-container-wrapper container">
+		  <div class="container swiper-container">
+		      <div class="swiper-wrapper cols-3">
+		          <div class="swiper-slide">
+		              <div class="img"><img src="images/hotel_discount_01.png" alt=""></div>
+		              <div class="caption">
+		                  <h4><a href="">銀聯尊享－星際兩晚連住</a></h4>
+		                  <p>預訂兩晚豪華住宿體驗，即享折扣優惠。
+雙人入住兩晚星際酒店豪華客房，免費無線上網，免費使用私人酒吧，免費使用健身室、天際游泳池及按摩池。</p>
+		                  <a href="#">了解详细<span class="iconi-arrow-right"></span></a>
+		              </div>
+		          </div>
+		          <div class="swiper-slide">
+		              <div class="img"><img src="images/hotel_discount_02.png" alt=""></div>
+		              <div class="caption">
+                    <h4><a href="">米芝蓮風味食住體驗</a></h4>
+		                  <p>連續四年被米芝蓮指南評選為「高級舒適」酒店，及「風味居」榮登為米芝蓮二星餐廳，客人除可在星際酒店享受星級款待外。</p>
+		                  <a href="#">了解详细<span class="iconi-arrow-right"></span></a>
+		              </div>
+		          </div>
+		          <div class="swiper-slide">
+		              <div class="img"><img src="images/hotel_discount_03.png" alt=""></div>
+		              <div class="caption">
+                    <h4><a href="">米芝蓮「高級舒適」酒店</a></h4>
+		                  <p>以優惠價入住行政客房一晚，並 免費享用每天早餐及單程船票兩張。以優惠價入住行政客房一晚，並 免費享用每天早餐及單程船票兩張。</p>
+		                  <a href="#">了解详细<span class="iconi-arrow-right"></span></a>
+		              </div>
+		          </div>
+		      </div>
+		  </div>
+		  <div class="left control text-center">
+          <span class="galaxyicon-left icon-arrow-left"></span>
+      </div>
+      <div class="right control text-center">
+          <span class="galaxyicon-right icon-arrow-right"></span>
+      </div>
+		</div>
+</section>
+<script src="js/hotel_discount.js" charset="utf-8"></script>
+
+			<!-- endinject -->
+			<!-- inject:hotel/hotel_advertisement:html -->
+			<section id="hotel_advertisement" class="container">
+	<div class="hotel_advertisement-main">
+		<h4 class="hotel_advertisement-main__header">银娱优越会</h4>
+		<p class="hotel_advertisement-main__describe">出示银娱优越会会员卡，尊享高折扣的餐饮优惠</p>
+	</div>
+	<span class="btn btn-info">了解详情<span class="galaxyicon-right"></span></span>
+</section>
+			<!-- endinject -->
+			<!-- inject:common/sm_footer_section:html -->
+			<footer id="sm_footer_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-xl-10 col-xl-offset-1">
+                <!-- <div class="sm_footer_top">
+                    <a><img src="images/top.png" alt=""></a>
+                </div> -->
+                <!-- <div class="sm_footer_crumbs">
+                    <a href="">主页</a><i>/</i>
+                    <a href="">食味行乐</a><i>/</i>
+                    <a href="">购物</a><i>/</i>
+                    <span>独家系列</span>
+                </div> -->
+                <div class="row">
+                    <div class="col-xs-12 col-md-3 col-lg-3">
+                        <div class="footer_links">
+                            <h5>快捷预订 <span class="caret hidden-md hidden-lg"></span></h5>
+                            <ul class="footer_dropdown">
+                                <li><a href="">预订酒店</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-2 col-lg-2">
+                        <div class="footer_links">
+                            <h5>极致体验<span class="caret hidden-md hidden-lg"></span></h5>
+                            <ul class="footer_dropdown">
+                                <li><a href="">星优惠</a></li>
+                                <li><a href="">星客房</a></li>
+                                <li><a href="">星美食</a></li>
+                                <li><a href="">星娱乐</a></li>
+                                <li><a href="">星宴会</a></li>
+                                <li><a href="">银娱优越会</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-2 col-lg-2">
+                        <div class="footer_links">
+                            <h5>关于我们<span class="caret hidden-md hidden-lg"></span></h5>
+                            <ul class="footer_dropdown">
+                                <li><a href="">集团介绍</a></li>
+                                <li><a href="">奖项殊荣</a></li>
+                                <li><a href="">新闻中心</a></li>                              
+                                <li><a href="">联系我们</a></li>
+                                <li><a href="">银河娱乐集团</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_links">
+                            <h5>集团其他成员<span class="caret hidden-md hidden-lg"></span></h5>
+                            <ul class="footer_dropdown">
+                                <li><a href="">「澳門銀河」</a></li>
+                                <li><a href="">「澳門百老匯」</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-2 col-lg-2">
+                        <div class="footer_links">
+                            <h5>帮助信息 <span class="caret hidden-md hidden-lg"></span></h5>
+                            <ul class="footer_dropdown">
+                                <li><a href="">交通指南</a></li>
+                                <li><a href="">周到服务</a></li>
+                                <li><a href="">便捷付款</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-3 col-lg-3 moreicons">
+                        <h5>关注我们</h5>
+                        <div class="chat">
+                            <a class="wechat-hov">
+                                <i class="iconi-logo-wechat"></i>
+                                <div class="code-drop"><img src="images/qr.png"></div>
+                            </a>
+                            <a><i class="iconi-logo-sina"></i></a>
+                            <a><i class="iconi-logo-youku"></i></a>
+                            <a>
+                                <span class="iconi-logo-owl">
+                        <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="subscribe">
+                            <h5 class="title">
+                                订阅爱赏，尊享网上优惠
+                            </h5>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="请输入你的邮箱地址">
+                                <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button">提<span class="hidden-lg hidden-md">&emsp;</span>交</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="address">
+                                <span class="glyphicon glyphicon-map-marker left"></span> 地址：澳门友谊大马路
+                            </div>
+                            <div class="dropdown language">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="iconi-globe left"></span> Language<span class="glyphicon-menu-down glyphicon hidden-lg hidden-md"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">简体中文</a></li>
+                                    <li><a href="#">English</a></li>
+                                    <li><a href="#">繁體中文</a></li>
+                                </ul>
+                                <select class="language-select hidden-lg hidden-md hidden-sm">
+                                    <option value="">简体中文</option>
+                                    <option value="">English</option>
+                                    <option value="">繁體中文</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block qr">
+                    <ul>
+                        <li class="galaxyicon-front galaxyicon-tel">预订专线：<a href="tel:853 2888 0888">853 2888 0888</a></li>
+                        <li class="galaxyicon-front galaxyicon-wechat">微信订房</li>
+                        <li class="qr-img"><img src="images/qr.png" alt=""></li>
+                        <li class="footer-logo hidden-lg hidden-md"><img src="images/logo.svg" alt=""></li>
+                    </ul>
+                </div>
+                <ul class="list-inline text-center foot-line2">
+                    <li><a href="">网站地图</a></li>
+                    <li><a href="">隐私政策</a></li>
+                    <li><a href="">使用条款</a></li>
+                    <li><a href="">提防伪冒网站行骗及电话诈骗</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="copyright text-center">
+        © 2018 中国澳门特别行政区注册企业：新银河娱乐有限公司，保留所有权利。
+    </div>
+    <!-- <img src="images/6footer.png" alt=""> -->
+</footer>
+<script src="js/sm_footer_section.js" charset="utf-8"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    footer_links();
+    $(".footer_links h5").click(function() {
+        var win_wid = $(window).width();
+        if (win_wid < 992) {
+            if ($(this).hasClass("clicked_h5")) {
+                $(".footer_dropdown").slideUp();
+                $(".footer_links h5").removeClass("clicked_h5");
+            } else {
+                $(".footer_dropdown").slideUp();
+                $(".footer_links h5").removeClass("clicked_h5");
+                $(this).parent().find(".footer_dropdown").slideDown();
+                $(this).addClass("clicked_h5");
+            }
+        }
+
+
+    });
+});
+
+$(window).resize(function() {
+    footer_links();
+});
+
+function footer_links() {
+
+    var win_wid = $(window).width();
+
+    if (win_wid < 992) {
+        $(".footer_dropdown").slideUp();
+
+    } else {
+        $(".footer_dropdown").slideDown();
+    }
+
+
+}
+</script>
+
+			<!-- endinject -->
+		</div>
+	</body>
+</html>

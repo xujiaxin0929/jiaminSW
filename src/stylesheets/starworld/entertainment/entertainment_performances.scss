@@ -1,0 +1,16 @@
+#entertainment_performances{
+  @extend #entertainment_show;
+  margin-bottom: 72px;
+  @media (max-width:$screen-sm-max) {
+    margin-bottom:35px;
+  }
+  .desc{
+    left: 0;
+  }
+  .fr{
+    float: right;
+    @media (max-width:$screen-sm-max) {
+      float: none;
+    }
+  }
+}

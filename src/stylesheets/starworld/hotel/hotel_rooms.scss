@@ -1,0 +1,259 @@
+#hotel_rooms {
+    .container-fluid {
+        .left {
+            left: 12px;
+            top: 42%;
+            display: none;
+            span {
+                background-color: rgba(0, 0, 0, 0.6);
+                color: #fff;
+                border: none;
+            }
+            @media (max-width:991px) {
+                display: none !important;
+            }
+        }
+        .right {
+            right: 12px;
+            top: 42%;
+            display: none;
+            span {
+                background-color: rgba(0, 0, 0, 0.6);
+                color: #fff;
+                border: none;
+            }
+            @media (max-width:991px) {
+                display: none !important;
+            }
+        }
+        .swiper-container {
+            overflow: hidden;
+            .swiper-slide {
+                img {
+                    width: 100%;
+                }
+            }
+            .swiper-pagination-bullets{
+                bottom:30px;
+                font-size: 0;
+                @media (max-width:$screen-xs-max) {
+                    bottom:10px;
+                }
+                .swiper-pagination-bullet{
+                    margin: 0 7px;
+                    width:14px;
+                    height:14px;
+                    @media (max-width:$screen-xs-max) {
+                        width:9px;
+                        height:9px;
+                        margin:0 8px;
+                    }
+                }
+            }
+        }
+        .row {
+            position: relative;
+            margin-bottom: 40px;
+            &:last-child{margin-bottom: 0;}
+            @media (max-width:$screen-xs-max) {
+                margin-bottom: 0;
+            }
+            .col-lg-6 {
+                width: 49%;
+                @media (max-width: 991px) {
+                    width: 100%;
+                }
+                &.desc {
+                    position: absolute;
+                    height: 100%;
+                    right: 0;
+                    width: 51%;
+                    @media (max-width: 991px) {
+                        width: 100%;
+                        position: static;
+                    }
+                }
+            }
+            &:nth-child(odd) {
+                .swiper-container {
+                    float: left !important;
+                    &:before{
+                        content:"";
+                        position:absolute;
+                        width:0;
+                        height:0;
+                        border-style: solid;
+                        border-width: 15px 12px;
+                        border-color: transparent #fff transparent transparent;
+                        top:50%;
+                        right:0;
+                        margin-top: -15px;
+                        z-index: 5;
+                        @media (max-width:$screen-xs-max) {
+                            display:none;
+                        }
+                    }
+                }
+            }
+            &:nth-child(even) {
+                .swiper-container {
+                    float: right !important;
+                    &:before{
+                        content:"";
+                        position:absolute;
+                        width:0;
+                        height:0;
+                        border-style: solid;
+                        border-width: 15px 12px;
+                        border-color: transparent transparent transparent #fff;
+                        top:50%;
+                        left:0;
+                        margin-top: -15px;
+                        z-index: 5;
+                        @media (max-width:$screen-xs-max) {
+                            display:none;
+                        }
+                    }
+                }
+                .col-lg-6 {
+                    &.desc {
+                        left: 0;
+                    }
+                }
+                .h3-title {
+                    .line {
+                        left: 110%;
+                    }
+                }
+            }
+            .h3-title {
+                position: relative;
+                display: inline-block;
+                margin: 0 auto;
+                font-size: 40px;
+                color:#79451b;
+                letter-spacing: 13px;
+                @media (max-width: $screen-sm-max) {
+                    font-size: 25px;
+                    letter-spacing: 8px;
+                }
+                .line {
+                    position: absolute;
+                    top: 12px;
+                    right: 110%;
+                    width: 800px;
+                    height: 1px;
+                    background-color: #bbb;
+                }
+            }
+        }
+        .detail {
+            padding-left: 14%;
+            padding-right: 14%;
+            display: table;
+            height: 100%;
+            @media (max-width: $screen-sm-max) {
+                padding: 25px 12px 5px;
+            }
+            .inner {
+                display: table-cell;
+                vertical-align: middle;
+                .iconi-arrow-right {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-top: -2px;
+                }
+                .text-left {
+                    margin: 15px 0 25px;
+                    font-size: 16px;
+                    color: #111;
+                    line-height: 26px;
+                    @media (max-width:$screen-xs-max) {
+                        font-size: 14px;
+                        line-height: 23px;
+                        margin: 12px 0 18px;
+                    }
+                }
+                .hotel_rooms_list{
+                    list-style: none;
+                    padding:0;
+                    overflow:hidden;
+                    li{
+                        width:50%;
+                        float:left;
+                        font-size: 14px;
+                        color:#111;
+                        line-height: 20px;
+                        position:relative;
+                        padding-left: 20px;
+                        margin-bottom: 8px;
+                         @media (max-width:$screen-xs-max) {
+                            width:100%;
+                            padding-left: 18px;
+                         }
+                        &:nth-child(2n+1) {
+                            @media (min-width:$screen-sm-max) {
+                                clear: both;
+                            }
+                        }
+                        &:before{
+                            content:"";
+                            position:absolute;
+                            width:10px;
+                            height:10px;
+                            background-color: #111;
+                            border-radius: 50%;
+                            left:0;
+                            top:5px;
+                            @media (max-width:$screen-xs-max) {
+                                width:7px;
+                                height:7px;
+                                top:7px;
+                            }
+                        }
+                    }
+                }
+            }
+            img {
+                margin: 0 auto 10px;
+                display: block;
+            }
+        }
+    }
+}
+
+/**max-width: 767px**/
+
+@media screen and (max-width: $screen-sm-max) {
+    #hotel_allhotels_22 {
+        .container-fluid {
+            .row {
+                margin-bottom: 50px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .detail {
+                .line {
+                    display: block !important;
+                }
+                img {
+                    width: 130px;
+                    margin-top: 14px;
+                    margin-bottom: 10px;
+                }
+                .img-lsked {
+                    width: 130px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                .text-left {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .swiper-pagination-bullets {
+            bottom: 10px !important;
+        }
+    }
+}

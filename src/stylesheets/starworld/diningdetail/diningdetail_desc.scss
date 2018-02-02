@@ -1,0 +1,161 @@
+#diningdetail_desc {
+    .diningdetail_logo {
+        padding: 0 15px;
+        img {
+            margin: 0 auto;
+        }
+    }
+    .diningdetail_prompt {
+        margin-top: 25px;
+        a {
+            display: inline-block;
+            font-size: 14px;
+            color: #000;
+            border-bottom: 1px solid #111;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        span {
+            font-size: 12px;
+        }
+        @media (max-width: $screen-sm-max) {
+          text-align: center;
+          margin-top: 21px;
+        }
+    }
+    .col-md-2{
+        padding-right: 15px;
+    }
+    .col-md-10 {
+        position: relative;
+        @media (max-width: $screen-sm-max) {
+            padding: 0 15px;
+        }
+    }
+    .diningdetail_til {
+        .mobi-logo {
+            display: inline-block;
+            max-width: 70px;
+            max-height: 82px;
+            vertical-align: bottom;
+        }
+        span {
+            font-size: 40px;
+            color: #111;
+            letter-spacing: 13px;
+            @media (max-width: $screen-sm-max) {
+                font-size: 30px;
+                letter-spacing: 10px;
+                padding-left: 10px;
+            }
+        }
+    }
+    .diningdetail_text {
+        font-size: 16px;
+        color: #111;
+        line-height: 24px;
+        padding: 20px 0 26px;
+        position: relative;
+        margin-bottom: 26px;
+        &:after {
+            content: "";
+            width: 290px;
+            height: 1px;
+            background-color: #111;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            @media (max-width:$screen-sm-max) {
+              width:173px;
+            }
+        }
+    }
+    .diningdetail_contact {
+        >p{
+          @media (max-width:$screen-sm-max) {
+            font-size: 12px;
+            margin-bottom: 3px;
+          }
+        }
+        li {
+            overflow: hidden;
+            margin-bottom: 10px;
+            list-style: none;
+            @media (max-width:$screen-sm-max) {
+              font-size: 12px;
+              margin-bottom: 3px;
+            }
+            span {
+                float: left;
+                margin: 4px 15px 0 0;
+                font-size: 14px;
+                @media (max-width:$screen-sm-max) {
+                  margin-right: 9px;
+                }
+                &.glyphicon-map-marker {
+                    margin-left: -1px;
+                }
+                &.restaurant-icon {
+                    width: 14px;
+                    height: 16px;
+                    background: url(../images/restaurant-icon.svg) no-repeat;
+                    background-size: 14px;
+                    background-position: center;
+                }
+            }
+            p {
+                overflow: hidden;
+                margin: 0;
+                color: #111;
+                line-height: 24px;
+                @media (max-width:$screen-sm-max) {
+                  font-size: 12px;
+                }
+            }
+        }
+        ul {
+            padding: 0;
+            margin-top: 15px;
+            @media (max-width:$screen-sm-max) {
+              margin-top: 0;
+            }
+        }
+    }
+    .diningdetail_oreder {
+        @media (min-width: $screen-sm-max) {
+            margin-left: 0;
+            font-size: 18px;
+            height:40px;
+            line-height: 40px;
+            letter-spacing: 2px;
+        }
+        width: 220px;
+        height:30px;
+        line-height: 30px;
+        display:block;
+        margin:25px auto;
+        font-size: 14px;
+        color:#111;
+        background-color: #fee32b;
+        text-align: center;
+    }
+    .share {
+        @media (min-width: $screen-sm-max) {
+            position: absolute;
+            text-align: left;
+            top: 0;
+            right: 0;
+            margin-top: 10px;
+        }
+        @media (max-width: $screen-sm-max) {
+            font-size: 15px;
+            margin-top: 25px;
+            a{
+              margin-left: 13px;
+            }
+        }
+        .facebook-icon2{
+            width:22px;
+        }
+    }
+}

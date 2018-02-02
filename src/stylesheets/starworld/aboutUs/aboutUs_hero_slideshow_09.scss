@@ -1,0 +1,41 @@
+#aboutUs_hero_slideshow_09{
+  @extend #hp_hero_slideshow_09;
+  position: absolute;
+  @media (max-width:767px) {
+    // height:391px;
+  }
+  .swiper-pagination{
+    bottom:30px;
+  }
+  .slide-box{
+    @media (max-width: 767px){
+      padding:0 30px;
+    }
+    h1{
+      font-size: 51px;
+      @media (max-width: 767px){
+        font-size: 42px;
+        line-height: 47px;
+      }
+    }
+  }
+  .swiper-slide{
+    h2{
+      font-size: 30px;
+      @media (max-width: 767px){
+        font-size: 21px;
+        line-height: 28px;
+      }
+    }
+  }
+  .swiper-pagination{
+    @media (max-width: 767px){
+      display:block;
+    }
+  }
+}
+@media (max-width:767px) {
+    .main-content{
+      margin-top:391px;
+    }
+}

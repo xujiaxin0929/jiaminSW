@@ -1,0 +1,177 @@
+{
+    "tasks": [
+        {
+            "name": "homepage",
+            "desc": "0.0 Homepage",
+            "blocks": [
+                "common/sm_main_menu",
+                "homepage/hp_hero_slideshow_09",
+                "common/hp_bookingbar_10",
+                "homepage/hp_offers",
+                "homepage/hp_gourmet",
+                "homepage/hp_occcasionpackages_12",
+                "common/sm_footer_section"
+            ]
+        },
+        {
+            "name": "hotel",
+            "desc": "1.0 Hotel",
+            "blocks": [
+                "common/sm_main_menu",
+                "hotel/hp_hero_slideshow_09",
+                "common/hp_bookingbar_10",
+                "hotel/hotel_skinny_bookinbar",
+                "hotel/hotel_rooms",
+                "hotel/hotel_more",
+                "hotel/hotel_testimonials",
+                "hotel/hotel_advertisement",
+                "common/sm_footer_section"
+            ]
+        },
+	
+        {
+            "name": "GettingHere",
+            "desc": "0.1 Getting Here-Free Shuttle Buses&Parking",
+            "blocks": [
+                "common/sm_main_menu",
+                "GettingHere/GettingHereFSBuses_hero_slide",
+                "common/sm_footer_section"
+            ]
+        },
+        {
+            "name": "contactUs",
+            "desc": "0.2 contact US",
+            "blocks": [
+                "contactUs/contactUs_content"
+            ]
+        },
+        {
+            "name": "aboutUs",
+            "desc": "0.3 about us",
+            "blocks": [
+                "common/sm_main_menu",
+                "aboutUs/aboutUs_02",
+                "common/sm_footer_section"
+            ]
+        },
+        {
+            "name": "newsDetail",
+            "desc": "0.4.1 newsDetail",
+            "blocks": [
+            ]
+        },
+        {
+            "name": "privacyPolicy",
+            "desc": "0.5 privacy-Policy",
+            "blocks": [
+                "common/sm_main_menu",
+                "privacyPolicy/privacyPolicy_content",
+                "common/sm_footer_section"
+            ]
+        },
+        {
+            "name": "dining",
+            "desc": "2.0 Dining",
+            "blocks": [
+                "conmmon/sm_main_menu",
+                "dining/dining_signature",
+                "dining/dining_restraurants",
+                "common/sm_footer_section"
+            ]
+        },
+                {
+            "name": "diningdetailfwj",
+            "desc": "2.1 Dining_Detail_FWJ",
+            "blocks": []
+        },
+        {
+            "name": "diningdetailszh",
+            "desc": "2.2 Dining_Detail_SZH",
+            "blocks": [
+                "diningdetail/diningdetail_recommended"
+            ]
+        },
+        {
+            "name": "entertainment",
+            "desc": "3.0 Entertainment",
+            "blocks" : [
+                "conmmon/sm_main_menu",
+                "common/sm_footer_section"
+            ]
+        },
+        {
+            "name": "beware",
+            "desc": "0.6 Beware",
+            "blocks" : [
+                "conmmon/sm_main_menu",
+                "beware/beware_content",
+                "common/sm_footer_section"
+            ]
+        },
+	{
+            "name": "newsList",
+            "desc": "0.4 NewsList",
+            "blocks" : [
+            ]
+        },
+        {
+            "name": "disclaimer",
+            "desc": "0.7 Disclaimer",
+            "blocks" : [
+                "conmmon/sm_main_menu",
+                "common/sm_footer_section"
+            ]
+        },
+         {
+            "name": "sitemap",
+            "desc": "0.8 sitemap",
+            "blocks" : [
+                "conmmon/sm_main_menu",
+                "common/sm_footer_section"
+            ]
+        },
+        {
+            "name": "error",
+            "desc": "0.9 error",
+            "blocks" : [
+                "conmmon/sm_main_menu",
+                "error/error_introduce",
+                "common/sm_footer_section"
+            ]
+        },
+        {
+            "name": "promotion",
+            "desc": "5.0 Promotion",
+            "blocks": []
+        },
+	{
+            "name": "promotiondetail",
+            "desc": "5.1 PromotionDetail",
+            "blocks": []
+        },
+        {
+            "name": "banquet",
+            "desc": "4.0 banquet",
+            "blocks": [
+                "banquet/banquet_wedding",
+                "banquet/banquet_submission"
+            ]
+        },
+        {
+            "name": "rewards",
+            "desc": "6.0 reward",
+            "blocks": [
+                "rewards/rewards_hero_slide",
+                "rewards/rewards_introduce",
+                "rewards/rewards_nav"
+            ]
+        },
+        {
+            "name": "searchResultPage",
+            "desc": "0.0.2 Search result page",
+            "blocks": [
+                "searchResultPage/searchResultPage_content"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+#entertainment_show {
+    .entertainment_box {
+        position: relative;
+        img {
+            width: 100%;
+        }
+        background-color: #f4f4f4;
+        @media (max-width:$screen-sm-max) {
+          background-color: #fff;
+        }
+        .desc {
+            padding: 0 12%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            @media (max-width:$screen-sm-max) {
+              position:static;
+              padding: 20px 15px 0;
+            }
+            h4 {
+                font-size: 40px;
+                color: #79451b;
+                line-height: 1.35;
+                letter-spacing: 13px;
+                text-indent: 13px;
+                @media (max-width:$screen-sm-max) {
+                  font-size: 25px;
+                }
+            }
+            p {
+                font-size: 16px;
+                color: #333;
+                line-height: 26px;
+                margin-top: 15px;
+                @media (max-width:$screen-sm-max) {
+                  font-size: 14px;
+                  margin-top: 5px;
+                }
+            }
+        }
+    }
+}

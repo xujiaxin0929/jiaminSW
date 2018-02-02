@@ -1,0 +1,14 @@
+#hp_entertainment{
+  @extend #hp_hotel_11;
+  .col-lg-4{
+    left:0;
+    @media (max-width:$screen-sm-max){
+      padding-bottom: 0;
+    }
+  }
+  .col-md-6 {
+    @media (min-width:$screen-sm-max){
+      float: right;
+    }
+  }
+}

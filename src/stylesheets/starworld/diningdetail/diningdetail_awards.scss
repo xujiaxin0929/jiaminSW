@@ -1,0 +1,50 @@
+#diningdetail_awards {
+    .diningdetail_awards_list {
+        overflow: hidden;
+        margin: 45px 0 0;
+        text-align: center;
+        font-size: 0;
+        @media (max-width: $screen-sm-max) {
+          padding: 0 5%;
+          margin: 18px 0 0;
+        }
+        li {
+            width: 33.3%;
+            text-align: center;
+            display: inline-block;
+            list-style: none;
+            padding: 0;
+            vertical-align: top;
+            @media (max-width: $screen-sm-max) {
+                width: 50%;
+                margin-bottom: 25px;
+            }
+            .pic {
+                height: 100px;
+                line-height: 100px;
+                margin-bottom: 15px;
+                @media (max-width: $screen-sm-max) {
+                  height: 81px;
+                  line-height: 81px;
+                  margin-bottom: 7px;
+                }
+                img {
+                    max-height: 100px;
+                    vertical-align: middle;
+                    @media (max-width: $screen-sm-max) {
+                      max-height: 81px;
+                    }
+                }
+            }
+            p {
+                color: #111;
+                font-size: 16px;
+                line-height: 24px;
+                @media (max-width: $screen-sm-max) {
+                  font-size: 14px;
+                  line-height: 19px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,187 @@
+#newsEvents_title {
+    margin-top: 134px;
+    @media(max-width: $screen-sm-max) {
+        margin-top: 50px;
+    }
+    .container {
+        .row {
+            .title_left {
+                position: relative;
+                padding-right: 14px;
+                @media(max-width: $screen-sm-max) {
+                    padding-right: 0px;
+                }
+                img {
+                    width: 100%;
+                    &:nth-child(1) {
+                        display: block;
+                        @media(max-width: $screen-xs-max) {
+                            display: none;
+                        }
+                    }
+                    &:nth-child(2) {
+                        display: none;
+                        @media(max-width: $screen-xs-max) {
+                            display: block;
+                            height: auto;
+                            width: 100%;
+                            position: relative;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            -webkit-transform: translateX(-50%);
+                        }
+                    }
+                }
+                .title_txtbox {
+                    position: absolute;
+                    bottom: 34px;
+                    left: 34px;
+                    width: 100%;
+                    @media(max-width: $screen-sm-max) {
+                        left: 20px;
+                    }
+                    .m_br_block {
+                        display: none;
+                        @media(max-width: $screen-sm-max) {
+                            display: block;
+                        }
+                    }
+                    h4 {
+                        a {
+                            display: inline-block;
+                            font-size: 50px;
+                            color: #fff;
+                            margin-bottom: 18px;
+                            &:hover {
+                                color: #fff;
+                            }
+                            @media(max-width: $screen-sm-max) {
+                                font-size: 23px;
+                                line-height: 35px;
+                                margin-bottom: 0px;
+                            }
+                        }
+                    }
+                    span {
+                        display: block;
+                        width: 82%;
+                        font-size: 16px;
+                        color: #fff;
+                        text-overflow: -o-ellipsis-lastline;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        @media(max-width: $screen-xs-max) {
+                            width: 345px;
+                            font-size: 15px;
+                            line-height: 25px;
+                            text-overflow: -o-ellipsis-lastline;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 4;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+                }
+            }
+            .newsDetail_m_block{
+                display: none;
+                @media(max-width:$screen-sm-max){
+                    display: block;
+                    padding: 0 20px;
+                    margin-top: 26px;
+                }
+                img{
+                    margin-right: 25px;
+                }
+
+            }
+            .title_right {
+                padding-left: 14px;
+                @media(max-width: $screen-sm-max) {
+                    padding: 26px 20px 0;
+                }
+                .row {
+                    div {
+                        h4 {
+                            font-size: 18px;
+                            color: #000;
+                            @media(max-width: $screen-sm-max) {
+                                font-size: 20px;
+                            }
+                        }
+                        select {
+                            display: block;
+                            width: 100%;
+                            height: 28px;
+                            border: 1px solid #bbbbbb;
+                            color: #000;
+                            outline: none;
+                            padding-left: 10px;
+                            font-size: 14px;
+                            margin-top: 20px;
+                            outline: none;
+                            appearance: none;
+                            -moz-appearance: none;
+                            -webkit-appearance: none;
+                            background: #fff;
+                            -webkit-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            -o-user-select: none;
+                            user-select: none;
+                            background: url(../images/select-down.png) no-repeat scroll 94% center #fff;
+                            &::-ms-expand {
+                                display: none;
+                            }
+                            @media(max-width: $screen-sm-max) {
+                                height: 37px;
+                                padding-left: 15px;
+                                font-size: 17px;
+                                margin-top: 15px;
+                            }
+                        }
+                        ul {
+                            padding-left: 0px;
+                            @media(max-width: $screen-sm-max) {
+                                margin-bottom: 0px;
+                            }
+                            li {
+                                margin-top: 6px;
+                                font-size: 16px;
+                                list-style: none;
+                                @media(max-width: $screen-sm-max) {
+                                    display: inline-block;
+                                    font-size: 15px;
+                                    line-height: 25px;
+                                    margin-right: 15px;
+                                    &:nth-child(6) {
+                                        margin-right: 0px;
+                                    }
+                                }
+                                a {
+                                    color: #79451b;
+                                }
+                            }
+                        }
+                    }
+                    div:nth-child(2) {
+                        margin-top: 30px;
+                        @media(max-width: $screen-sm-max) {
+                            margin-top: 32px;
+                            h4 {
+                                margin-bottom: 15px;
+                            }
+                        }
+                        h4 {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

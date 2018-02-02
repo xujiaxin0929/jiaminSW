@@ -1,0 +1,72 @@
+#error_introduce{
+  margin-top: 170px;
+  @media (max-width:$screen-xs-max) {
+    margin: 107px 0 30px;
+  }
+  .error-content{
+    border-bottom: 1px solid #79451b;
+    font-size: 0;
+    text-align: center;
+    margin-bottom: 40px;
+    >div{
+      display:inline-block;
+      img{
+        vertical-align: bottom;
+        @media (max-width:$screen-xs-max) {
+          width: 178px;
+        }
+      }
+      &.error-con-0{
+        bottom: -3px;
+        padding: 0 15px;
+        background-color: #fff;
+        position: relative;
+      }
+    }
+    &+.text-center{
+      font-size: 13px;
+    }
+  }
+  .error-btn-group{
+    margin:25px 0 80px;
+    font-size: 0;
+    @media (max-width:$screen-xs-max) {
+      margin: 23px 0 12px;
+    }
+    .btn{
+      width: 200px;
+      margin: 0 10px;
+      padding: 6px 0;
+      border-color: #79451b;
+      color: #79451b;
+      &:hover{
+          background: #79451b;
+          border-color: #79451b;
+          color: #fff;
+      }
+      @media (max-width:$screen-xs-max) {
+        display:block;
+        margin: 0 36px 11px;
+        width:auto;
+        font-size: 18px;
+        letter-spacing: 0;
+      }
+    }
+  }
+  .understand-wrap{
+    @extend #hp_offers;
+    @media (max-width:$screen-xs-max) {
+      margin-top: 0;
+    }
+    >p{
+      margin-bottom: 25px;
+      color:#343434;
+      @media (max-width:$screen-xs-max) {
+        padding-left: 36px;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+        font-size: 15px;
+      }
+    }
+  }
+}

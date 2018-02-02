@@ -1,0 +1,50 @@
+#aboutUs_02{
+    margin-top: 76px;
+    @media(max-width: $screen-xs-max){
+        margin-top: 64px;
+    }
+    .container{
+        @media(max-width:$screen-xs-max){
+            padding: 0 15px;
+        }
+        .row{
+            >div{
+                h2{
+                    font-size: 40px;
+                    color: #794617;
+                    margin-bottom: 27px;
+                    text-align: center;
+                    @media(max-width:$screen-xs-max){
+                        font-size: 25px;
+                        margin-bottom: 22px;
+                    }
+                }
+                p{
+                    margin: 0px;
+                    padding: 0px;
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: #343434;
+                    margin-bottom: 25px;
+                    text-align: center;
+                    @media(max-width:$screen-xs-max){
+                        font-size: 14px;
+                        line-height: 23px;
+                        margin-bottom: 31px;
+                    }
+                }
+                span{
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: #343434;
+                    text-align: center;
+                    display: block;
+                    @media(max-width:$screen-xs-max){
+                        font-size: 14px;
+                        line-height: 23px;   
+                    }
+                }
+            }
+        }
+    }
+}

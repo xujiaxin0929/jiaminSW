@@ -1,0 +1,113 @@
+#promotiondetail_content{
+  padding-bottom: 30px;
+  margin-top: 27px;
+  @media (max-width:$screen-sm-max) {
+    padding:0 12px 10px;
+  }
+  h4{
+    font-size: 24px;
+    color:#111;
+    letter-spacing: 3px;
+    font-weight: 600;
+    @media (max-width:$screen-sm-max) {
+      font-size: 20px;
+    }
+  }
+  p{
+    font-size: 16px;
+    color:#111;
+    line-height: 26px;
+    @media (max-width:$screen-sm-max) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  .tel-a{
+    font-size: 16px;
+    color:#111;
+    line-height: 26px;
+    @media (max-width:$screen-sm-max) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  .til{
+    font-size: 16px;
+    color:#111;
+    background-color: #f4f4f4;
+    padding: 9px 0;
+    text-align: center;
+    margin: 22px 0 18px;
+    @media (max-width:$screen-sm-max) {
+      font-size: 20px;
+      letter-spacing: 7px;
+      text-indent: 7px;
+      padding:11px 0;
+      font-weight: 600;
+    }
+  }
+  .desc{
+    font-size: 14px;
+    color:#111;
+    padding-left: 10px;
+    ul{
+      margin: 15px 0;
+      list-style: none;
+      padding:0;
+      li{
+        position: relative;
+        padding-left: 20px;
+        padding-bottom: 5px;
+        font-size: 14px;
+        &:before{
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background-color: #333;
+          border-radius: 50%;
+          left:0;
+          top:8px;
+        }
+      }
+    }
+  }
+  .desc2{
+    margin-top: 40px;
+    @media (max-width:$screen-sm-max) {
+      margin-top: 20px;
+    }
+    p{
+      margin-top: 5px;
+    }
+  }
+  .con-wrap{
+    overflow:hidden;
+    font-size: 14px;
+    color:#111;
+    .cw-fl{
+      text-align: right;
+      float: left;
+      width: 13.8%;
+      margin-right: 8px;
+      padding: 11px 10px;
+      @media (max-width:$screen-sm-max) {
+        margin-right: 1px;
+        width:29%;
+        padding: 15px 13px 15px 0;
+      }
+    }
+    .cw-fr{
+      overflow:hidden;
+      padding-left: 10px;
+      padding: 11px 10px;
+      @media (max-width:$screen-sm-max) {
+        padding: 15px 13px;
+      }
+    }
+    &.con-wrap-bg{
+      .cw-fl{background-color: #f4f4f4;}
+      .cw-fr{background-color: #f4f4f4;}
+    }
+  }
+}

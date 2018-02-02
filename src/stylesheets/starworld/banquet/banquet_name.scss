@@ -1,0 +1,30 @@
+#banquet_name{
+    @extend #hotel_name;
+    p{
+        @media(max-width:$screen-xs-max){
+            margin-bottom: 0px;
+        }
+    }
+    button{
+        width: 258px;
+        height: 38px;
+        font-size: 16px;
+        color: #79451b;
+        border: 1px solid #79451b;
+        text-align: center;
+        line-height: 38px;
+        background: #fff;
+        margin-top: 35px;
+        padding: 0px;
+        &:hover{
+            background: #79451b;
+            color: #fff;
+            padding: 0px;
+        }
+        @media(max-width:$screen-xs-max){
+            width: 100%;
+            font-size: 14px;
+            margin-top: 24px;
+        }
+    }
+}

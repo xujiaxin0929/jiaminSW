@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>2.1 dining detail</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/daterangepicker.min.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/jquery-ui.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/classList.min.js"></script>
+    <script src="js/lib/swiper.min.js"></script>
+    <script src="js/lib/moment.min.js"></script>
+    <script src="js/lib/jquery.daterangepicker.min.js"></script>
+</head>
+
+<body>
+    <!-- inject:common/sm_main_menu:html -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="sm_top_menu_01 container-fluid hidden-sm hidden-xs">
+        <ul class="navbar-nav list-unstyled">
+            <li class="lh">银河娱乐集团：</li>
+            <li><a href="#">澳门星际酒店</a></li>
+            <li class="divider-vertical"></li>
+            <li><a href="#">澳门银河</a></li>
+            <li class="divider-vertical"></li>
+            <li><a href="#">澳门百老汇</a></li>
+        </ul>
+        <ul class="navbar-nav list-unstyled navbar-right">
+            <li>
+                <div class="wechat-hov">
+                    <span class="galaxyicon galaxyicon-wechat left"></span>微信预订
+                    <div class="code-drop"><img src="images/qr.png"></div>
+                </div>
+            </li>
+            <li><span class="galaxyicon galaxyicon-tel left"></span>+853 2888 0888</li>
+            <li><a href="#"><span class="glyphicon glyphicon-map-marker left"></span>如何到达</a></li>
+            <li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="iconi-globe left"></span>Language</a>
+                <ul class="dropdown-menu language-menu">
+                    <li><a href="#">简体中文</a></li>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">繁體中文</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="container-fluid sm_top_menu_03">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <div class="navbar-toggle collapsed">
+                <div class="iconbar-container">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </div>
+                <div class="icon-text">
+                    菜单
+                </div>
+            </div>
+            <a class="navbar-brand" href="homepage.html">
+                <i class="sm"></i>
+                <img src="images/logo.svg" class="img-responsive" alt="">
+            </a>
+            <div class="pull-right">
+                <div class="btn-search">
+                    <div><span class="iconi-zoom"></span></div>
+                    <div><span class="iconi-close"></span></div>
+                </div>
+            </div>
+            <div class="search-wrap"></div>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav placeholder">
+                <li class="hidden-sm hidden-xs"><a href="#"> a</a></li>
+            </ul>
+            <ul class="nav navbar-nav nav-left">
+                <li><a href="promotion.html">优惠</a></li>
+                <li><a href="hotel.html">客房</a></li>
+                <li><a href="dining.html">美食</a></li>
+            </ul>
+            <ul class="nav navbar-nav nav-right">
+                <li><a href="entertainment.html">娱乐</a></li>
+                <li><a href="banquet.html">宴会</a></li>
+                <li><a href="rewards.html">银娱优越会</a></li>
+                <li class="btn-search hidden-xs hidden-sm">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <div><i class="iconi-zoom"></i></div>
+                        <div><i class="iconi-close"></i></div>
+                    </a>
+                    <div class="dropdown-menu search">
+                        <div class="search-main">
+                            <div class="input-group">
+                                <span class="input-group-addon iconi-zoom"></span>
+                                <input type="search" class="form-control">
+                            </div>
+                            <div class="search-content">
+                                <p>更多精彩内容，欢迎了解：</p>
+                                <ul>
+                                    <li><a href="">澳门百老汇</a></li>
+                                    <li><a href="">澳门JW万豪酒店</a></li>
+                                    <li><a href="">澳门丽思卡尔顿</a></li>
+                                    <li><a href="">红伶</a></li>
+                                    <li><a href="">百老汇奇幻秀</a></li>
+                                </ul>   
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <div class="mobile-language row">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="iconi-globe left"></span> Language</a>
+            <div class="ml-slect">
+                <select>
+                    <option value=""><a href="#">简体中文</a></option>
+                    <option value=""><a href="#">English</a></option>
+                    <option value=""><a href="#">繁體中文</a></option>
+                </select>   
+            </div>
+        </div>
+        <!-- mobile collapse modal -->
+        <div class="collapse-modal"></div>
+    </div>
+    <!-- /.container-fluid -->
+    <!-- booking fixed -->
+    <div class="booking-fixed" id="booking-fixed">
+        <button class="navbar-toggle" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="container">
+            <fieldset class="inner">
+                <h5 class="hidden-xs hidden-sm">预订酒店</h5>
+                <div class="date-select dropdown">
+                    <div><span class="iconi-date"></span><span class="result" id="date2">2017年09月20日 - 2017年09月21日</span><span class="caret" id="input_trigger11"></span></div>
+                </div>
+                <div id="datepicker"></div>
+                <div class="number-people-select dropdown">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="result">
+                            <span class="iconi-people"></span>&nbsp;
+                            <span class="select-result3">2</span>人
+                            <span class="select-result4">1</span>&nbsp;房间
+                            <span class="caret"></span>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu1 dropdown-menu">
+                        <div class="title">
+                            <div>
+                                <span class="glyphicon glyphicon-minus"></span>
+                                <span class="room-num">1</span><span>房间</span>
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </div>
+                            <div>
+                                <span class="glyphicon glyphicon-minus"></span>
+                                <span class="adult-num">2</span><span>成人</span>
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </div>
+                            <div>
+                                <span class="glyphicon glyphicon-minus"></span>
+                                <span class="children-num">0</span><span>儿童</span>
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="btn-order btn-gold">立即预订</a>
+            </fieldset>
+        </div>
+    </div>
+</nav>
+<script src="js/sm_main_menu.js" charset="utf-8"></script>
+
+    <!-- endinject -->
+    <!-- inject:diningdetailfwj/hp_hero_slideshow_09:html -->
+    <div id="hp_hero_slideshow_09" class="swiper-container no-bookingbar">
+    <div class="swiper-wrapper text-center">
+        <div class="swiper-slide">
+            <img class="slide-bg" src="images/diningdetail_hero_slideshow_1.png">
+            <div class="slide-box">
+                <h1>湘川美食<span>共冶一炉</span></h1>
+                <h2>星厨打造 川湘饕餮</h2>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img class="slide-bg" src="images/diningdetail_hero_slideshow_1.png">
+            <div class="slide-box">
+                <h1>湘川美食<span>共冶一炉</span></h1>
+                <h2>星厨打造 川湘饕餮</h2>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img class="slide-bg" src="images/diningdetail_hero_slideshow_1.png">
+            <div class="slide-box">
+                <h1>湘川美食<span>共冶一炉</span></h1>
+                <h2>星厨打造 川湘饕餮</h2>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination swiper-pagination-white swiper-pagination-clickable"></div>
+    <div class="swiper-button-prev"><span class="galaxyicon-left icon-arrow-down color-white"></span></div>
+    <div class="swiper-button-next"><span class="galaxyicon-right icon-arrow-down color-white"></span></div>
+</div>
+<script src="js/hp_hero_slideshow_09.js" charset="utf-8"></script>
+
+    <!-- endinject -->
+    <div class="main-content hp-content" id="diningdetail_content">
+        <div class="text-fff">
+            <!-- inject:diningdetailfwj/diningdetail_desc:html -->
+            <section id="diningdetail_desc" class="container">
+    <div class="row">
+        <div class="col-md-2 hidden-sm hidden-xs text-center">
+            <div class="diningdetail_logo"><img src="images/diningdetail_logo_02.png" class="img-responsive"></div>
+        </div>
+        <div class="col-md-10 col-sm-12">
+            <h4 class="diningdetail_til"><img src="images/diningdetail_logo_02.png" class="mobi-logo hidden-lg hidden-md"><span>风味居</span></h4>
+            <div class="diningdetail_text">想在澳门尝到湘川之味的精华，米其林二星餐厅风味居是不二之选。无论是刀工精妙的经典湘菜，麻辣辛香的川味美食，亦或是筋道弹牙的精致面点，均能带来意想不到的惊喜。清幽雅致的就餐环境，精致典雅的中式餐具，烘托出菜品最本色的绝佳风味。置身“风味居”，领略来自天府之国的味蕾盛宴。</div>
+            <div class="diningdetail_contact">
+                <p>营业时间及地点：</p>
+                <ul>
+                    <li><span class="restaurant-icon"></span>
+                        <p>时间：每日早上11时至晚上11时</p>
+                    </li>
+                    <li><span class="glyphicon glyphicon-map-marker"></span>
+                        <p>地点：5楼</p>
+                    </li>
+                    <li><span class="glyphicon glyphicon-earphone"></span>
+                        <p>电话：+853 8290 8668</p>
+                    </li>
+                    <li>
+                        <span class="glyphicon glyphicon-heart"></span>
+                        <p>温馨提示：请穿着休闲正装，谢绝背心及拖鞋</p>
+                    </li>
+                </ul>
+            </div>
+            <a href="" class="diningdetail_oreder">立即预订</a>
+            <div class="share text-center">
+            <span class="hidden-lg hidden-md">美好值得</span>分享：<a href="" class="wechat-hov"><i class="iconi-logo-wechat"></i><div class="code-drop"><img src="images/qr.png"></div></a><a href=""><i class="iconi-logo-sina"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <!-- endinject -->
+            <!-- inject:diningdetailfwj/diningdetail_awards:html -->
+            <section id="diningdetail_awards" class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+            <h3><span>荣获奖项</span></h3>
+            <p class="lead">AWARDS</p>
+        </div>
+    </div>
+    <ul class="diningdetail_awards_list">
+        <li>
+            <div class="pic"><img src="images/diningdetail_awards_1.png"></div>
+            <p>《米其林指南香港澳门 2017》<br/>米其林二星餐厅</p>
+        </li>
+        <li>
+            <div class="pic"><img src="images/diningdetail_awards_2.png"></div>
+            <p>《Hong Kong Tatler 2017》<br/>澳门最佳餐厅 </p>
+        </li>
+        <li>
+            <div class="pic"><img src="images/diningdetail_awards_3.png"></div>
+            <p href="">南华早报 <br/>100 Top Table 2017</p>
+        </li>
+    </ul>
+</section>
+
+            <!-- endinject -->
+            <!-- inject:diningdetailfwj/diningdetail_recommended:html -->
+            <section id="diningdetail_recommended" class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+            <h3><span>招牌美食</span></h3>
+            <p class="lead">RECOMMENDED</p>
+        </div>
+    </div>
+    <div class="swiper-container-wrapper container">
+        <div class="container swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="" class="img"><img class="img-responsive" src="images/diningdetail_recommended_1.png" alt=""></a>
+                    <div class="caption">
+                        <h4><a href="">毛家红烧肉</a></h4>
+                        <p>精选厚度适中的五花肉，汇聚桂皮、香叶、辣椒等多种香料，在高汤中熬制2小时令酱汁入味，因而皮弹肉糯，口感厚实。 </p>
+                        <!-- <a href="#">了解详情<span class="iconi-arrow-right"></span></a> -->
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="" class="img"><img class="img-responsive" src="images/diningdetail_recommended_2.png" alt=""></a>
+                    <div class="caption">
+                        <h4><a href="">水煮飘香沸腾鱼</a></h4>
+                        <p>由厨师花整整3天时间，汇集20多种四川香料，打造秘制红油。每块鱼片厚度均一，再配上时蔬及红油口感丰富，新鮮嫩滑。</p>
+                        <!-- <a href="#">了解详情<span class="iconi-arrow-right"></span></a> -->
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="" class="img"><img class="img-responsive" src="images/diningdetail_recommended_3.png" alt=""></a>
+                    <div class="caption">
+                        <h4><a href="">红袍辣子鸡块</a></h4>
+                        <p>精选土鸡最富弹性的鸡腿部位，经腌制、深炸、干炒等多重工序，口感外焦内嫩，甘香松脆，配上从四川空运而来的辣椒、花椒和独家酱料，尽显川味之极致。</p>
+                        <!-- <a href="#">了解详情<span class="iconi-arrow-right"></span></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="left control text-center">
+            <span class="galaxyicon-left icon-arrow-left"></span>
+        </div>
+        <div class="right control text-center">
+            <span class="galaxyicon-right icon-arrow-right"></span>
+        </div>
+    </div>
+    <div class="diningdetail_menu">
+      <h5>请选择你喜欢的菜单</h5>
+      <ul class="diningdetail_menu_list">
+        <li>
+          <div class="pic"><img src="images/diningdetail_menu_1.png"></div>
+          <a href="">精品菜单</a>
+        </li>
+        <li>
+          <div class="pic"><img src="images/diningdetail_menu_2.png"></div>
+          <a href="">酒类菜单</a>
+        </li>
+        <li>
+          <div class="pic"><img src="images/diningdetail_menu_3.png"></div>
+          <a href="">茶品菜单</a>
+        </li>
+      </ul>
+    </div>
+</section>
+<script src="js/diningdetail_recommended.js"></script>
+
+            <!-- endinject -->
+            <!-- inject:diningdetailfwj/diningdetail_cook:html -->
+            <section id="diningdetail_cook" class="container">
+    <div class="col-lg-8 col-md-6 col-sm-12"><img src="images/diningdetail_cook_01.png"></div>
+    <div class="col-lg-4 col-md-6 col-sm-12 desc">
+        <div class="detail">
+            <div class="inner">
+                <h2>顶级星厨</h2>
+                <p>星际酒店行政中餐总厨 陈植强</p>
+                <p>
+                    从业超过25年，不仅有着高超烹饪技艺，更在秉承传统中餐精髓的同时力求革新。以精妙的创意搭配独特的烹饪手法，驾驭新颖食材的同时展现地道风味。
+                </p>
+                <p>个人奖项：</p>
+                <ul class="diningdetail_cook_list">
+                    <li>2010年荣获获世界中国烹饪联合会“国际中餐名厨邀请赛金奖”</li>
+                    <li>2011年荣获台湾举办的世界中餐团体赛季军.</li>
+                    <li>2012年荣获世界厨王江阴华西争霸赛“个人热菜项目”冠军</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <!-- endinject -->
+            <!-- inject:homepage/hp_offers:html -->
+            <section id="hp_offers">
+    <div class="container">
+        <div class="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+            <h3><span>星优惠</span></h3>
+            <p class="lead">OFFERS</p>
+        </div>
+    </div>
+    <div class="swiper-container-wrapper container">
+        <div class="container swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="" class="img"><img class="img-responsive" src="images/hp_offers_01.png" alt=""></a>
+                    <div class="caption">
+                        <h4><a href="">品味 . 自选欧陆滋味</a></h4>
+                        <p>多款前菜、沙拉及刺身任君选择，配搭新鲜焙制的法式甜品，悠享欧陆情调。</p>
+                        <a href="#">了解详情<span class="iconi-arrow-right"></span></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="" class="img"><img class="img-responsive" src="images/hp_offers_02.png" alt=""></a>
+                    <div class="caption">
+                        <h4><a href="">品味欢乐时光</a></h4>
+                        <p>欢乐时段内指定饮品买一送一，更可以优惠价品尝精选晚餐，美食配美酒，不负好时光！</p>
+                        <a href="#">了解详情<span class="iconi-arrow-right"></span></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="" class="img"><img class="img-responsive" src="images/hp_offers_03.png" alt=""></a>
+                    <div class="caption">
+                        <h4><a href="">湘川美食 饕餮天堂</a></h4>
+                        <p>香料专家风味居严选时令食材，炮制火辣至微辣川湘菜式 。</p>
+                        <a href="#">了解详情<span class="iconi-arrow-right"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="left control text-center">
+            <span class="galaxyicon-left icon-arrow-left"></span>
+        </div>
+        <div class="right control text-center">
+            <span class="galaxyicon-right icon-arrow-right"></span>
+        </div>
+    </div>
+</section>
+<script src="js/hp_offers.js" charset="utf-8"></script>
+
+            <!-- endinject -->
+            <!-- inject:diningdetailfwj/hotel_testimonials:html -->
+            <section id="hotel_testimonials" class="container">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-no-swiping">
+                <div class="container">
+                    <div class="row">
+                        <div class=" left-field col-xs-12 col-md-9 col-lg-9">
+                            <p class="qoute-feild">
+                                <span class="qoute-feild__left">“</span>
+                                <span class="qoute-feild__right">”</span>星际酒店的装修设计融合传统中国文化，为迎合东方品牌文化，特意请来影帝梁朝伟担任品牌代言人。设有超过507间客房和套房两间面积6000平方呎的超级豪华天际套房，所有房间均可观看澳门景色。酒店亦有多家食肆、娱乐场所和商店。另设有水疗中心、健康桑拿会所、卡拉OK、夜总会、健身室及17楼的天际泳池等。
+                            </p>
+                        </div>
+                        <div class=" right-feild col-xs-12 col-md-3 col-lg-3">
+                            <div class="col-xs-12 col-md-6 col-lg-6 img">
+                                <img class="right-feild__img img-responsive img-circle" src="images/hotel_advantages-7.png">
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-lg-6 text">
+                                <h4 class="right-feild__name">北极麦麦</h4>
+                                <div class="right-feild__date">
+                                    (上海,中国)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="js/hotel_testimonials.js" charset="utf-8"></script>
+
+            <!-- endinject -->
+        </div>
+        <!-- inject:hotel/hotel_advertisement:html -->
+        <section id="hotel_advertisement" class="container">
+	<div class="hotel_advertisement-main">
+		<h4 class="hotel_advertisement-main__header">银娱优越会</h4>
+		<p class="hotel_advertisement-main__describe">出示银娱优越会会员卡，尊享高折扣的餐饮优惠</p>
+	</div>
+	<span class="btn btn-info">了解详情<span class="galaxyicon-right"></span></span>
+</section>
+        <!-- endinject -->
+        <!-- inject:common/sm_footer_section:html -->
+        <footer id="sm_footer_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-xl-10 col-xl-offset-1">
+                <!-- <div class="sm_footer_top">
+                    <a><img src="images/top.png" alt=""></a>
+                </div> -->
+                <!-- <div class="sm_footer_crumbs">
+                    <a href="">主页</a><i>/</i>
+                    <a href="">食味行乐</a><i>/</i>
+                    <a href="">购物</a><i>/</i>
+                    <span>独家系列</span>
+                </div> -->
+                <div class="row">
+                    <div class="col-xs-12 col-md-3 col-lg-3">
+                        <div class="footer_links">
+                            <h5>快捷预订 <span class="caret hidden-md hidden-lg"></span></h5>
+                            <ul class="footer_dropdown">
+                                <li><a href="">预订酒店</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-2 col-lg-2">
+                        <div class="footer_links">
+                            <h5>极致体验<span class="caret hidden-md hidden-lg"></span></h5>
+                            <ul class="footer_dropdown">
+                                <li><a href="">星优惠</a></li>
+                                <li><a href="">星客房</a></li>
+                                <li><a href="">星美食</a></li>
+                                <li><a href="">星娱乐</a></li>
+                                <li><a href="">星宴会</a></li>
+                                <li><a href="">银娱优越会</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-2 col-lg-2">
+                        <div class="footer_links">
+                            <h5>关于我们<span class="caret hidden-md hidden-lg"></span></h5>
+                            <ul class="footer_dropdown">
+                                <li><a href="">集团介绍</a></li>
+                                <li><a href="">奖项殊荣</a></li>
+                                <li><a href="">新闻中心</a></li>                              
+                                <li><a href="">联系我们</a></li>
+                                <li><a href="">银河娱乐集团</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_links">
+                            <h5>集团其他成员<span class="caret hidden-md hidden-lg"></span></h5>
+                            <ul class="footer_dropdown">
+                                <li><a href="">「澳門銀河」</a></li>
+                                <li><a href="">「澳門百老匯」</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-2 col-lg-2">
+                        <div class="footer_links">
+                            <h5>帮助信息 <span class="caret hidden-md hidden-lg"></span></h5>
+                            <ul class="footer_dropdown">
+                                <li><a href="">交通指南</a></li>
+                                <li><a href="">周到服务</a></li>
+                                <li><a href="">便捷付款</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-3 col-lg-3 moreicons">
+                        <h5>关注我们</h5>
+                        <div class="chat">
+                            <a class="wechat-hov">
+                                <i class="iconi-logo-wechat"></i>
+                                <div class="code-drop"><img src="images/qr.png"></div>
+                            </a>
+                            <a><i class="iconi-logo-sina"></i></a>
+                            <a><i class="iconi-logo-youku"></i></a>
+                            <a>
+                                <span class="iconi-logo-owl">
+                        <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="subscribe">
+                            <h5 class="title">
+                                订阅爱赏，尊享网上优惠
+                            </h5>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="请输入你的邮箱地址">
+                                <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button">提<span class="hidden-lg hidden-md">&emsp;</span>交</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="address">
+                                <span class="glyphicon glyphicon-map-marker left"></span> 地址：澳门友谊大马路
+                            </div>
+                            <div class="dropdown language">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="iconi-globe left"></span> Language<span class="glyphicon-menu-down glyphicon hidden-lg hidden-md"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">简体中文</a></li>
+                                    <li><a href="#">English</a></li>
+                                    <li><a href="#">繁體中文</a></li>
+                                </ul>
+                                <select class="language-select hidden-lg hidden-md hidden-sm">
+                                    <option value="">简体中文</option>
+                                    <option value="">English</option>
+                                    <option value="">繁體中文</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block qr">
+                    <ul>
+                        <li class="galaxyicon-front galaxyicon-tel">预订专线：<a href="tel:853 2888 0888">853 2888 0888</a></li>
+                        <li class="galaxyicon-front galaxyicon-wechat">微信订房</li>
+                        <li class="qr-img"><img src="images/qr.png" alt=""></li>
+                        <li class="footer-logo hidden-lg hidden-md"><img src="images/logo.svg" alt=""></li>
+                    </ul>
+                </div>
+                <ul class="list-inline text-center foot-line2">
+                    <li><a href="">网站地图</a></li>
+                    <li><a href="">隐私政策</a></li>
+                    <li><a href="">使用条款</a></li>
+                    <li><a href="">提防伪冒网站行骗及电话诈骗</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="copyright text-center">
+        © 2018 中国澳门特别行政区注册企业：新银河娱乐有限公司，保留所有权利。
+    </div>
+    <!-- <img src="images/6footer.png" alt=""> -->
+</footer>
+<script src="js/sm_footer_section.js" charset="utf-8"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    footer_links();
+    $(".footer_links h5").click(function() {
+        var win_wid = $(window).width();
+        if (win_wid < 992) {
+            if ($(this).hasClass("clicked_h5")) {
+                $(".footer_dropdown").slideUp();
+                $(".footer_links h5").removeClass("clicked_h5");
+            } else {
+                $(".footer_dropdown").slideUp();
+                $(".footer_links h5").removeClass("clicked_h5");
+                $(this).parent().find(".footer_dropdown").slideDown();
+                $(this).addClass("clicked_h5");
+            }
+        }
+
+
+    });
+});
+
+$(window).resize(function() {
+    footer_links();
+});
+
+function footer_links() {
+
+    var win_wid = $(window).width();
+
+    if (win_wid < 992) {
+        $(".footer_dropdown").slideUp();
+
+    } else {
+        $(".footer_dropdown").slideDown();
+    }
+
+
+}
+</script>
+
+        <!-- endinject -->
+    </div>
+</body>
+
+</html>

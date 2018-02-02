@@ -1,0 +1,153 @@
+#hotel_testimonials{
+	padding-bottom: 38px;
+	border:2px solid #79451b;
+	border-radius: 3px;
+	overflow: hidden;
+	.left-field{
+		padding: 50px 35px 0 55px;
+		p{
+			margin-bottom: 15px;
+			@media (max-width: $screen-sm-max){
+				margin-bottom: 10px;
+			}
+		}
+		>a{
+			@media (max-width: $screen-sm-max){
+				font-size: 15px;
+			}
+		}
+		.qoute-feild{
+			position: relative;
+			font-size: 16px;
+			line-height: 26px;
+			color:#343434;
+			@media (max-width: $screen-md-max){
+				font-size: 15px;
+				line-height: 25px;
+			}
+			&__left{
+				position: absolute;
+				font-size: 60px; 
+				top: 0;
+				left: -28px;
+				color:#79451b;
+			}
+			&__right{
+				position: absolute;
+				font-size: 60px; 
+				bottom: -18px;
+				right: -20px;
+				color:#79451b;
+			}
+		}
+	}
+	.right-feild{
+		// text-align: right;
+		@media (max-width: $screen-md-max){
+			text-align: center;
+		}
+		.text{
+			@media (min-width: $screen-sm-max){
+				text-align: right;
+				padding: 0 20px;
+			}
+		}
+		.img{
+			@media (min-width: $screen-sm-max){
+				float: right;
+			}
+		}
+		&__name{
+			padding-top: 60px;
+			font-size: 20px;
+			letter-spacing: 5px;
+			text-indent: 5px;
+			@media (max-width: $screen-xs-max){
+				padding-top: 18px;
+				font-size: 18px;
+			}
+		}
+		&__date{
+			padding: 15px 5px 0;
+			font-size: 14px;
+			line-height: 14px;
+			@media (max-width: $screen-xs-max){
+				padding-top: 10px;
+				font-size: 15px;
+			}
+		}
+		&__img{
+			margin-top: 38px;
+			display:inline-block;
+		}
+	}
+	.swiper-container{
+		height: 100%;
+		.swiper-pagination-bullet {
+			background-color: #999;
+			opacity: 1;
+			margin:0 8px;
+		}
+		.swiper-pagination-bullet-active {
+			background-color: #343434; 
+		}
+	}
+}
+
+@media (min-width: $screen-md-min) {/**992**/
+	#hotel_testimonials{
+		.active_noImg{
+			.left-field{
+				width: 83.33%;
+			}
+			.right-feild{
+				width: 16.67%;
+				> div:nth-child(1){
+					display: none;
+				}
+
+				&-main{
+					width: 100%;
+				}
+			}
+		}
+	}
+	
+}
+
+@media (max-width: $screen-sm-max) { /*991**/
+	#hotel_testimonials{
+		height:auto;
+		.swiper-container{
+			padding-bottom: 0;
+		}
+		.left-field{
+			padding: 25px 33px 0 33px; 
+		}
+		.right-feild{
+			text-align: center;
+			padding-top: 21px;
+			&__img{
+				margin: 0 auto;
+			}
+			&__date{
+				padding-top: 10px;
+			}
+		}
+		.active_noImg{
+			.right-feild__img{
+				display: none;
+			}
+		}
+		.swiper-pagination{
+			bottom: 20px;
+			font-size: 0;
+		}
+	}
+}
+@media (max-width:580px) {
+	#hotel_testimonials{
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}

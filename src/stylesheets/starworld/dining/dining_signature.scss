@@ -1,0 +1,104 @@
+#dining_signature {
+    .dining_restraurants_box {
+        background-color: #343434;
+        .col-lg-8 {
+            padding-right: 10px;
+            @media (max-width:$screen-sm-max) {
+              padding:0;
+            }
+            .swiper-container {
+                img {
+                    width: 100%;
+                }
+                .swiper-pagination {
+                  font-size: 0;
+                  bottom:14px;
+                  .swiper-pagination-bullet{
+                    width:13px;
+                    height:13px;
+                    margin: 0 7px;
+                  }
+                }
+            }
+        }
+        .col-lg-4 {
+            padding: 15px 15px 15px 10px;
+            @media (max-width:$screen-sm-max) {
+              padding:10px 15px 30px;
+            }
+            .sw-btn{
+              @media (max-width:$screen-sm-max) {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width:219px;
+                height:30px;
+                line-height: 30px;
+                margin-top: 22px;
+              }
+            }
+
+        }
+        .dining_restraurants_head{
+          overflow: hidden;
+          margin-bottom: 15px;
+          img{
+            float: right;
+            max-width: 70px;
+            max-height: 78px;
+            @media (max-width:$screen-sm-max) {
+              max-width: 50px;
+              max-height: 50px;
+            }
+          }
+          h2{
+            font-size: 40px;
+            color:#fff;
+            letter-spacing: 13px;
+            padding-top: 23px;
+            margin:0;
+            @media (max-width:$screen-sm-max) {
+              font-size: 30px;
+              letter-spacing: 10px;
+              padding-top: 13px;
+            }
+          }
+        }
+        .dining_restraurants_desc{
+          color:#fff;
+          line-height: 24px;
+          margin-bottom: 10px;
+          @media (max-width:$screen-xs-max) {
+            padding-bottom: 18px;
+            position:relative;
+            margin-bottom: 20px;
+            &:after{
+              content: "";
+              width:173px;
+              height:1px;
+              background-color: #fff;
+              position: absolute;
+              bottom:0;
+              left:0;
+            }
+          }
+        }
+        .dining_restraurants_desc2{
+          color:#fff;
+          overflow:hidden;
+          line-height: 24px;
+          margin-bottom: 10px;
+          span{
+            width:70px;
+            white-space: nowrap;
+            text-align: right;
+            margin-right: 15px;
+            float:left;
+          }
+          p{
+            overflow:hidden;
+            margin:0;
+          }
+        }
+    }
+}

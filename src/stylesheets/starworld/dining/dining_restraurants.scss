@@ -1,0 +1,14 @@
+#dining_restraurants {
+    @extend #hp_offers;
+    .swiper-wrapper {
+        width: 1500px\9\0!important;
+        .swiper-slide {
+            position: relative;
+            height: 410px\9\0;
+            margin-bottom: 20px\9\0;
+        }
+        .english-til {
+            letter-spacing: 0 !important;
+        }
+    }
+}

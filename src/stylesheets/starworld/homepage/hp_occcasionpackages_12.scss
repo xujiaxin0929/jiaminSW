@@ -1,0 +1,21 @@
+#hp_occcasionpackages_12 {
+    @extend #hp_hotel_11;
+    .swiper-container-wrapper{
+        .control{
+            top:50%;
+            margin-top: -30px;
+            @media (max-width:$screen-sm-max) {
+              top:24.5%;
+              margin-top: 0;
+            }
+            @media (max-width:$screen-xs-max) {
+              top:22%;
+              margin-top: 0;
+            }
+            @media (max-width:414px) {
+              top:16%;
+              margin-top: 0;
+            }
+        }
+    }
+}

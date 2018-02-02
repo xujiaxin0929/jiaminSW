@@ -1,0 +1,64 @@
+#rewards_hero_slide {
+    position: absolute;
+    @extend #hp_hero_slideshow_09;
+    .swiper-slide {
+        span {
+            @media (max-width: 767px) {
+                display: block;
+            }
+        }
+        .slide-box {
+            margin-top: 20px;
+          @media(max-width:$screen-xs-max){
+            margin-top: 10%;
+          }
+            img {
+                display: inline-block;
+                margin-top: -88px;
+                margin-left: -44px;
+                @media(max-width:$screen-xs-max){
+                  
+                  display: block;
+                  margin-top: 0px;
+                margin-right: 0px;
+                margin: 0 auto;
+                height: 74px;
+                margin-bottom: 20px;
+                }
+            }
+            div {
+                display: inline-block;
+                margin-left: 49px;
+                 @media(max-width:$screen-xs-max){
+                   display: block;
+                   margin-left: 0px;
+                 }
+                h2 {
+                    display: block;
+                    font-size: 50px;
+                    line-height: 70px;
+                    color: #fff;
+                     @media(max-width:$screen-xs-max){
+                       font-size: 42px;
+                       line-height: 50px;
+                       text-align: center;
+                     }
+                     span{
+                            @media(max-width:$screen-xs-max){
+                                text-align: center;
+                            }
+                     }
+                }
+            }
+        }
+    }
+    @media (max-width:767px) {
+        // height: 391px;
+    }
+}
+
+@media (max-width:767px) {
+    .main-content {
+        // margin-top: 391px;
+    }
+}
